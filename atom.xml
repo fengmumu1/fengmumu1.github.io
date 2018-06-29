@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-28T13:18:03.906Z</updated>
+  <updated>2018-06-29T13:02:48.423Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,74 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js number</title>
+    <link href="http://yoursite.com/2018/06/29/js-number/"/>
+    <id>http://yoursite.com/2018/06/29/js-number/</id>
+    <published>2018-06-29T13:02:48.000Z</published>
+    <updated>2018-06-29T13:02:48.423Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo下的markdown语法</title>
+    <link href="http://yoursite.com/2018/06/29/hexo-markdown-grammar/"/>
+    <id>http://yoursite.com/2018/06/29/hexo-markdown-grammar/</id>
+    <published>2018-06-29T12:53:40.000Z</published>
+    <updated>2018-06-29T15:59:24.840Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="markdown语法"><a href="#markdown语法" class="headerlink" title="markdown语法"></a>markdown语法</h1><h2 id="文章头部的-front-matter"><a href="#文章头部的-front-matter" class="headerlink" title="文章头部的 front-matter"></a>文章头部的 <code>front-matter</code></h2><p>目前我用的主题是<a href="https://github.com/iissnan/hexo-theme-next/releases" title="netx下载地址" target="_blank" rel="noopener">next</a>，版本是：v5.1.4 ,hexo的版本是3.7.1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: hexo下的markdown语法</span><br><span class="line">date: 2018-06-29 20:53:40</span><br><span class="line">tags: </span><br><span class="line">  - hexo</span><br><span class="line">  - markdown语法</span><br><span class="line">categories: hexo</span><br></pre></td></tr></table></figure></p><p>以前的tages的写法是 <code>tags: [aa,bb,cc]</code> ，现在我发现tages的写法是：隔行然后缩进前面加中划线，<strong>再加上一个空格</strong>，然后写上标签。<br><div class="note danger"><p>注意：tags 与后面的标签内容必须要有一个空格，在hexo中的很多地方都有这个要求</p></div></p><h2 id="文章相关的语法"><a href="#文章相关的语法" class="headerlink" title="文章相关的语法"></a>文章相关的语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">=====  (等于号)是一级标题</span><br><span class="line">------ （减号）是二级标题</span><br><span class="line">###    是三级标题</span><br></pre></td></tr></table></figure><p>或者使用传统的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#         H1</span><br><span class="line">##        H2</span><br><span class="line">###       H3</span><br><span class="line">...</span><br><span class="line">######    H6</span><br></pre></td></tr></table></figure></p><h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>单独一行使用<code>***</code>或者<code>——————（下划线）</code></p><h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>使用<code>~~需要删除的文字~~</code>来表示，<del>这个要被删除</del><br><div class="note danger"><p>注意：前后~~与文字没有空格</p></div></p><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接的文字](链接的地址 &quot;鼠标指上后链接显示的文字&quot;)</span><br></pre></td></tr></table></figure><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>用<code>\</code>来注释，类似于转义字符的效果</p><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 打工是不可能打工的，这辈子都不可能打工的 </span><br></pre></td></tr></table></figure><div class="note danger"><p>注意：如果仅在第一行使用 &gt;， 后面相邻的行即使省略 &gt;，也会变成引用内容，可以在结束的语句后面加上两个空格，或者与后面的语句直接空一行</p></div><p><strong>验证写法</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 打工是不可能打工的，这辈子都不可能打工的</span><br><span class="line">打工是不可能打工的，这辈子都不可能打工的 </span><br><span class="line">打工是不可能打工的，这辈子都不可能打工的 </span><br><span class="line"></span><br><span class="line">打工是不可能打工的，这辈子都不可能打工的 </span><br></pre></td></tr></table></figure><br><strong>效果</strong></p><blockquote><p>打工是不可能打工的，这辈子都不可能打工的<br>打工是不可能打工的，这辈子都不可能打工的<br>打工是不可能打工的，这辈子都不可能打工的 </p></blockquote><p>打工是不可能打工的，这辈子都不可能打工的<br><div class="note primary"><p>推荐使用后面说的<strong>内置标签</strong>来引入，效果更好<br>使用&gt;的嵌套格式，没有效果</p></div></p><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表有无序和有序之分，考虑到用实际使用无序列表居多，这里只介绍无序列表，无序列表使用空格的缩进来表示层级，+和- 都是他的关键字符,此外给-/+ 和文字中间加入 [ ] 可以有计划表的效果<br><strong>写法</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+ 计划A</span><br><span class="line">  + [ ] A计划第一步</span><br><span class="line">    +  [x]首先XXX</span><br><span class="line">- [ ] 计划B</span><br><span class="line">  - [ ] B计划第一步</span><br><span class="line">    -  [x]首先XXX</span><br></pre></td></tr></table></figure><br><strong>效果</strong></p><ul><li>计划A<ul><li style="list-style: none"><input type="checkbox"> A计划第一步<ul><li style="list-style: none"><input type="checkbox" checked> 首先XXX</li></ul></li></ul></li></ul><ul><li style="list-style: none"><input type="checkbox"> 计划B<ul><li style="list-style: none"><input type="checkbox"> B计划第一步<ul><li style="list-style: none"><input type="checkbox" checked> 首先XXX</li></ul></li></ul></li></ul><div class="note danger"><p>注意：关键字符与文字要有空格，[]中间要用空格打开，否则不生效     </p></div><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔表头与其他行<br><strong>写法</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 名字 | 性别 | 年龄 |</span><br><span class="line">| ---- | ---- | --- |</span><br><span class="line">| 张三 | 男 |  18 |</span><br><span class="line">| 赵淑芬 | 女 | 20 |</span><br></pre></td></tr></table></figure><br><strong>效果</strong></p><table><thead><tr><th>名字</th><th>性别</th><th>年龄</th></tr></thead><tbody><tr><td>张三</td><td>男</td><td>18</td></tr><tr><td>赵淑芬</td><td>女</td><td>20</td></tr></tbody></table><div class="note danger"><p>注意：为了使 Markdown 更清晰，| 和 - 两侧需要至少有一个空格（最左侧和最右侧的 | 外不需要）</p></div><div class="note primary"><p>如果想改变表格的对齐方式：需要在表投下方的分割线标记中加入 ：<br>此外，表格中可以放其他的markdown的标记 </p></div><ul><li>:— 代表左对齐</li><li>:–: 代表居中对齐</li><li>—: 代表右对齐</li><li>默认是左对齐<br><strong>写法</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 名字 | 性别 | 年龄 |</span><br><span class="line">| ----: | :----: | :--- |</span><br><span class="line">| 张三 | 男 |  18 |</span><br><span class="line">| 赵淑芬 | 女 | 20 |</span><br></pre></td></tr></table></figure><strong>效果</strong></li></ul><table><thead><tr><th style="text-align:right">名字</th><th style="text-align:center">性别</th><th style="text-align:left">年龄</th></tr></thead><tbody><tr><td style="text-align:right">张三</td><td style="text-align:center">男</td><td style="text-align:left">18</td></tr><tr><td style="text-align:right">赵淑芬</td><td style="text-align:center">女</td><td style="text-align:left">20</td></tr></tbody></table><h1 id="hexo-的标签语法"><a href="#hexo-的标签语法" class="headerlink" title="hexo 的标签语法"></a>hexo 的标签语法</h1><p>hexo 为了显示的效果更好，自身定义了一些标签插件，<a href="https://hexo.io/zh-cn/docs/tag-plugins.html" title="hexo中文文档链接" target="_blank" rel="noopener">hexo中文文档链接</a></p><h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><blockquote><p>content</p><footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote><h3 id="普通的引用"><a href="#普通的引用" class="headerlink" title="普通的引用"></a>普通的引用</h3><p>单纯使用<code><blockquote><p>aaa</p></blockquote></code> 就只是单纯的引用快，和<code>&gt;效果一样</code></p><h3 id="对书上语言的引用"><a href="#对书上语言的引用" class="headerlink" title="对书上语言的引用"></a>对书上语言的引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote 作者, 出处 %&#125;</span><br><span class="line">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>黑夜无论怎样悠长，白昼总会到来。</p><footer><strong>莎士比亚</strong><cite>麦克白</cite></footer></blockquote><h3 id="对网络上的引用"><a href="#对网络上的引用" class="headerlink" title="对网络上的引用"></a>对网络上的引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote @作者 网络地址 %&#125;</span><br><span class="line">xxxxxxxxxxxxxxxxxxxxxxxxxx</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><blockquote><p>有时候，“爱国”，是一个空洞的词语。更多的人是在言语里，在诗歌里”爱国“，他们没有一点点实际行动，甚至充满抱怨。</p><footer><strong>@余秀华</strong><cite><a href="http://blog.sina.com.cn/yuxiuhua1976" target="_blank" rel="noopener">blog.sina.com.cn/yuxiuhua1976</a></cite></footer></blockquote><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure><h3 id="普通代码块"><a href="#普通代码块" class="headerlink" title="普通代码块"></a>普通代码块</h3><p>不加任何参数的标签，和使用<code>（单行的时候使用）以及`</code>（多行的时候使用）效果一样</p><p>### </p><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure><p>写法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接的文字](链接的地址 &quot;鼠标指上后链接显示的文字&quot;)</span><br></pre></td></tr></table></figure></p><div class="note danger"><p>注意：前后~~与文字没有空格</p></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;markdown语法&quot;&gt;&lt;a href=&quot;#markdown语法&quot; class=&quot;headerlink&quot; title=&quot;markdown语法&quot;&gt;&lt;/a&gt;markdown语法&lt;/h1&gt;&lt;h2 id=&quot;文章头部的-front-matter&quot;&gt;&lt;a href=&quot;#文章头
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+      <category term="markdown语法" scheme="http://yoursite.com/tags/markdown%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中的数字存储</title>
+    <link href="http://yoursite.com/2018/06/29/JavaScript-number/"/>
+    <id>http://yoursite.com/2018/06/29/JavaScript-number/</id>
+    <published>2018-06-29T12:19:21.000Z</published>
+    <updated>2018-06-29T13:39:03.348Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="js基础" scheme="http://yoursite.com/categories/js%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="数字" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%97/"/>
+    
+      <category term="存储" scheme="http://yoursite.com/tags/%E5%AD%98%E5%82%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第一个文件</title>
     <link href="http://yoursite.com/2018/06/28/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6/"/>
     <id>http://yoursite.com/2018/06/28/第一个文件/</id>
     <published>2018-06-28T11:57:29.000Z</published>
-    <updated>2018-06-28T13:18:03.906Z</updated>
+    <updated>2018-06-29T12:15:11.633Z</updated>
     
     <content type="html"><![CDATA[<p>#第一个文件</p><p>浪费了大半天，试着用hexo在github上建了一个博客，就一个感觉：小屏幕太毁眼睛了</p><p>目前先这样后期有如下安排</p><ul><li>熟悉hexo</li><li>修改目前正在使用的<a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank" rel="noopener">appollo模版</a></li><li>写学习笔记</li></ul>]]></content>
     
@@ -38,6 +101,8 @@
       
     
     </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>

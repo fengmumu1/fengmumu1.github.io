@@ -2,9 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/06/29/hexo-markdown-grammar/</loc>
+    
+    <lastmod>2018-06-29T15:59:24.840Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/06/29/JavaScript-number/</loc>
+    
+    <lastmod>2018-06-29T13:39:03.348Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/06/29/js-number/</loc>
+    
+    <lastmod>2018-06-29T13:02:48.423Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2018-06-29T12:38:22.513Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2018-06-29T12:37:47.659Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2018-06-29T12:37:32.258Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/06/28/%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6/</loc>
     
-    <lastmod>2018-06-28T13:18:03.906Z</lastmod>
+    <lastmod>2018-06-29T12:15:11.633Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/404.html</loc>
+    
+    <lastmod>2018-06-29T11:05:43.847Z</lastmod>
     
   </url>
   
