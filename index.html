@@ -568,6 +568,10 @@
 </li>
 </ul>
 <div class="note danger"><p>注意：关键字符与文字要有空格，[]中间要用空格打开，否则不生效     </p></div>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](图片链接 &quot;optional title&quot;)</span><br></pre></td></tr></table></figure>
+<blockquote><p>Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。<br> 图片链接：可以是图片的本地地址或者是网址。<br> “optional title”：鼠标悬置于图片上会出现的标题文字，可以不写。</p>
+<footer><strong>@tahr</strong><cite><a href="https://www.zhihu.com/question/21065229/answer/132993179" target="_blank" rel="noopener">www.zhihu.com/question/21065229/answer/132993179</a></cite></footer></blockquote>
+<div class="note danger"><p>原生的语法使用效果不好，推荐使用后面hexo以及next的插入图片对应标签语法</p></div>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔表头与其他行<br><strong>写法</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 名字 | 性别 | 年龄 |</span><br><span class="line">| ---- | ---- | --- |</span><br><span class="line">| 张三 | 男 |  18 |</span><br><span class="line">| 赵淑芬 | 女 | 20 |</span><br></pre></td></tr></table></figure><br><strong>效果</strong></p>
 <table>
 <thead>
@@ -591,7 +595,7 @@
 </tbody>
 </table>
 <div class="note danger"><p>注意：为了使 Markdown 更清晰，| 和 - 两侧需要至少有一个空格（最左侧和最右侧的 | 外不需要）</p></div>
-<div class="note primary"><p>如果想改变表格的对齐方式：需要在表投下方的分割线标记中加入 ：<br>此外，表格中可以放其他的markdown的标记 </p></div>
+<div class="note primary"><p>如果想改变表格的对齐方式：需要在表头下方的分割线标记中加入 ：<br>此外，表格中可以放其他的markdown的标记 </p></div>
 <ul>
 <li>:— 代表左对齐</li>
 <li>:–: 代表居中对齐</li>
@@ -621,22 +625,48 @@
 </tbody>
 </table>
 <h1 id="hexo-的标签语法"><a href="#hexo-的标签语法" class="headerlink" title="hexo 的标签语法"></a>hexo 的标签语法</h1><p>hexo 为了显示的效果更好，自身定义了一些标签插件，<a href="https://hexo.io/zh-cn/docs/tag-plugins.html" title="hexo中文文档链接" target="_blank" rel="noopener">hexo中文文档链接</a></p>
-<h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><blockquote><p>content</p>
-<footer><strong>[author[</strong><cite>source]] [link] [source_link_title]</cite></footer></blockquote>
-<h3 id="普通的引用"><a href="#普通的引用" class="headerlink" title="普通的引用"></a>普通的引用</h3><p>单纯使用<code><blockquote><p>aaa</p>
-</blockquote></code> 就只是单纯的引用快，和<code>&gt;效果一样</code></p>
+<h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="普通的引用"><a href="#普通的引用" class="headerlink" title="普通的引用"></a>普通的引用</h3><p>在blockquote后面不写任何参数，就只是单纯的引用，效果与使用&gt;一样</p>
 <h3 id="对书上语言的引用"><a href="#对书上语言的引用" class="headerlink" title="对书上语言的引用"></a>对书上语言的引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote 作者, 出处 %&#125;</span><br><span class="line">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
 <blockquote><p>黑夜无论怎样悠长，白昼总会到来。</p>
 <footer><strong>莎士比亚</strong><cite>麦克白</cite></footer></blockquote>
 <h3 id="对网络上的引用"><a href="#对网络上的引用" class="headerlink" title="对网络上的引用"></a>对网络上的引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote @作者 网络地址 %&#125;</span><br><span class="line">xxxxxxxxxxxxxxxxxxxxxxxxxx</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
 <blockquote><p>有时候，“爱国”，是一个空洞的词语。更多的人是在言语里，在诗歌里”爱国“，他们没有一点点实际行动，甚至充满抱怨。</p>
 <footer><strong>@余秀华</strong><cite><a href="http://blog.sina.com.cn/yuxiuhua1976" target="_blank" rel="noopener">blog.sina.com.cn/yuxiuhua1976</a></cite></footer></blockquote>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code snippet</span><br></pre></td></tr></table></figure>
-<h3 id="普通代码块"><a href="#普通代码块" class="headerlink" title="普通代码块"></a>普通代码块</h3><p>不加任何参数的标签，和使用<code>（单行的时候使用）以及`</code>（多行的时候使用）效果一样</p>
-<p>### </p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure>
-<p>写法如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[链接的文字](链接的地址 &quot;鼠标指上后链接显示的文字&quot;)</span><br></pre></td></tr></table></figure></p>
-<div class="note danger"><p>注意：前后~~与文字没有空格</p></div>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="普通代码块"><a href="#普通代码块" class="headerlink" title="普通代码块"></a>普通代码块</h3><p>在codeblock不加任何参数的标签，和使用`（单行的时候使用）以及` ` `（多行的时候使用）效果一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock  %&#125;</span><br><span class="line">console.log(&quot;我叫丰木木&quot;)</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;我叫丰木木&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="带有使用语言的代码块（有高亮）"><a href="#带有使用语言的代码块（有高亮）" class="headerlink" title="带有使用语言的代码块（有高亮）"></a>带有使用语言的代码块（有高亮）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:JavaScript %&#125;</span><br><span class="line">console.log(&quot;我叫丰木木&quot;)</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"我叫丰木木"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="带有说明的代码块"><a href="#带有说明的代码块" class="headerlink" title="带有说明的代码块"></a>带有说明的代码块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock js控制台输出语句 %&#125;</span><br><span class="line">console.log(&quot;我叫丰木木&quot;)</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>控制台输出语句</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;我叫丰木木&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="附带有说明网址的代码块"><a href="#附带有说明网址的代码块" class="headerlink" title="附带有说明网址的代码块"></a>附带有说明网址的代码块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock 控制台输出语句 https://developer.mozilla.org/zh-CN/docs/Web/API/Console/log 查看MDN相关解释%&#125;</span><br><span class="line">console.log(&quot;我叫丰木木&quot;)</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>控制台输出语句</span><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console/log" target="_blank" rel="noopener">查看MDN相关解释</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;我叫丰木木&quot;)</span><br></pre></td></tr></table></figure>
+<h3 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h3><p>使用```  [title] [lang:language] [url] [link text] ``` 一样可以使用以上几个标签效果<br><div class="note danger"><p>注意：反引号代码块后面的参数 在本博客环境下实测没有效果，也就是说使用`是可以当做普通代码块使用</p></div></p>
+<h3 id="插入iframe"><a href="#插入iframe" class="headerlink" title="插入iframe"></a>插入iframe</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="插入image"><a href="#插入image" class="headerlink" title="插入image"></a>插入image</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] /path/to/image [width] [height] [title text [alt text]] %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="插入Include-Code"><a href="#插入Include-Code" class="headerlink" title="插入Include Code"></a>插入Include Code</h3><p>插入<code>source</code>文件夹中的代码文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include_code [title] [lang:language] path/to/file %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="next中的标签"><a href="#next中的标签" class="headerlink" title="next中的标签"></a>next中的标签</h2><p><a href="http://theme-next.iissnan.com/tag-plugins.html" title="next文档中文传门" target="_blank" rel="noopener">next文档中文传门</a></p>
+<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span><br><span class="line">&lt;!-- 其中 class=&quot;blockquote-center&quot; 是必须的 --&gt;</span><br><span class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;blah blah blah&lt;/blockquote&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span><br><span class="line">&#123;% centerquote %&#125;blah blah blah&#123;% endcenterquote %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 标签别名 --&gt;</span><br><span class="line">&#123;% cq %&#125; blah blah blah &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center"><p>当我看到人和草木一样生长繁衍，<br>任凭同一个老天他们鼓励阻拦。<br>青春时蓬蓬勃勃，全盛时又该走向凋落，<br>繁华和璀璨都将从记忆中消散。<br><strong>——Shakespeare 《莎士比亚十四行诗》</strong></p>
+</blockquote>
+<h3 id="插入的图片变大"><a href="#插入的图片变大" class="headerlink" title="插入的图片变大"></a>插入的图片变大</h3><p><strong>使用方式</strong></p>
+<ul>
+<li>HTML方式：使用这种方式时，为 img 添加属性 class=”full-image”即可。</li>
+<li>标签方式：使用 fullimage 或者 简写 fi， 并传递图片地址、 alt 和 title 属性即可。 属性之间以逗号分隔。<figure class="highlight plain"><figcaption><span>突破容器宽度限制的图片</span><a href="http://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">文档链接</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span><br><span class="line">&lt;!-- 其中 class=&quot;full-image&quot; 是必须的 --&gt;</span><br><span class="line">&lt;img src=&quot;/image-url&quot; class=&quot;full-image&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span><br><span class="line">&lt;span itemprop=&quot;image&quot; itemscope itemtype=&quot;http://schema.org/ImageObject&quot;&gt;&lt;img itemprop=&quot;url image&quot; src=&quot;/image-url&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;title&quot; /&gt;&lt;meta itemprop=&quot;width&quot; content=&quot;auto&quot;&gt;&lt;meta itemprop=&quot;height&quot; content=&quot;auto&quot;&gt;&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 别名 --&gt;</span><br><span class="line">&lt;span itemprop=&quot;image&quot; itemscope itemtype=&quot;http://schema.org/ImageObject&quot;&gt;&lt;img itemprop=&quot;url image&quot; src=&quot;/image-url&quot; class=&quot;full-image&quot; alt=&quot;alt&quot; title=&quot;title&quot; /&gt;&lt;meta itemprop=&quot;width&quot; content=&quot;auto&quot;&gt;&lt;meta itemprop=&quot;height&quot; content=&quot;auto&quot;&gt;&lt;/span&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Bootstrap-Callout"><a href="#Bootstrap-Callout" class="headerlink" title="Bootstrap Callout"></a>Bootstrap Callout</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note class_name %&#125; </span><br><span class="line">xxxxxxxxxxxxxxxxxxx </span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<p>class_name 数值可以为</p>
+<ul>
+<li>default</li>
+<li>primary</li>
+<li>success</li>
+<li>info</li>
+<li>warning</li>
+<li>danger</li>
+</ul>
+
           
         
       
