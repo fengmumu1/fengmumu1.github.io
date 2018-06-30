@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-29T13:02:48.423Z</updated>
+  <updated>2018-06-30T15:54:20.985Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>js number</title>
-    <link href="http://yoursite.com/2018/06/29/js-number/"/>
-    <id>http://yoursite.com/2018/06/29/js-number/</id>
-    <published>2018-06-29T13:02:48.000Z</published>
-    <updated>2018-06-29T13:02:48.423Z</updated>
+    <title>JavaScript中的数字存储</title>
+    <link href="http://yoursite.com/2018/06/30/js-number/"/>
+    <id>http://yoursite.com/2018/06/30/js-number/</id>
+    <published>2018-06-30T08:07:05.000Z</published>
+    <updated>2018-06-30T15:54:20.985Z</updated>
+    
+    <content type="html"><![CDATA[<p>JavaScript中数字是不区分整数值与浮点数值的，在JavaScript中所有的数均使用64位的浮点格式来存储以及表示（IEEE 754标准）。所以数值最大是：±1.7976931348623157 X 10^308最小是±5X10^-324，可以表示的整数范围是-9 007 199 254 740 992~9 007 199 254 740 992 （对应的是-2^53~2^53）包含边界值。<br><div class="note danger"><p>注意：在对js中的数值进行位操作的时候会自动把64位转化为32进行操作，在对小数进行位操作 比如左移零位，小数会丢弃小数部分转化成整数 </p></div><br><a id="more"></a><br>JavaScript中数字不一定很准确<br>首先我们先看一段代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">0</span></span><br><span class="line"><span class="keyword">var</span> y = <span class="number">0</span></span><br><span class="line">x = <span class="number">.3</span> - <span class="number">.2</span></span><br><span class="line">y = <span class="number">.2</span> - <span class="number">.1</span></span><br><span class="line"><span class="built_in">console</span>.log(x == <span class="number">.1</span> )</span><br><span class="line"><span class="built_in">console</span>.log(y == <span class="number">.1</span> )</span><br></pre></td></tr></table></figure><br>运行结果是 false 和 true<br>讲道理的说0.3 - 0.2 = 0.1;0.2-0.1 = 0.1 这个是正确的，那么为什么到了js的代码里就不正确了，解决这个问题，我们首先要看一下js的数字是如何存储的。<br>在本文的前言中我们说到了js用的是IEEE754标准，这个标准规定了浮点数的表示方法（此方法也是目前通用计算机所才用的浮点数存数方式）。在此标准中浮点数有float和double两种存储形式，但由于js是一种弱类型编程语言他的数字采用了double类型存储，也就是我们常说的使用64位来存储数字的双精度型。那么我们是如何利用这64位来存储数据的呢？    我们都知道科学计数法，即把一个数比如123465.555可以写成1.23456555<em>10^5，这样子不仅读写方便也能减少存数该数字的空间，123456.555是一个十进制的数字，那么我们是把一个二进制的数字是否也可以转化成这个形式，以达到减少存数空间的目的，答案是肯定的。我们把一个十进制数比如：<strong>3.25</strong> 写成二进制的形式：<strong>11001.01</strong>，类比十进制的写法，我们可以把他写成 **1.100101\</em>2^4<strong>，现在我们看一下这个数字，他由有效数字 </strong>1.100101<strong> 以及指数 </strong>2^4** 以及我们省略了的符号位组成（正数的符号位是 + 负数的是- 零的话严格来说不属于正负，计算机如何处理他我们后文将解释），那么64位的空间我们就知道需要放三大块的东西了：有效数字、指数、符号位</p><ul><li>sign bit(符号）：我们在64位的最高位放置符号位，最高位为1，表示数字是整数或者是零</li><li>exponent(指数):我们在从左往右再取11位用来表示指数</li><li>mantissa(尾数):我们把剩余的52位空间全部用来存储有效数字 <img src="/2018/06/30/js-number/64w.jpg" title="64位存储示意图"><div class="note primary"><p>1.为了最大限度的利用存储有效数字的52位，我们把小数点以及小数点前的那一个数字给省略掉（正确的化简后尾数会被处理到大于等于1而小于2的区间内，这时候便可省去前导的“1”），所以我们只需要存贮小数点后面的 <strong>100101</strong>就可以了<br>2.在上图中存储指数的数值叫做阶码，有它转换出来的阶码的数值等于指数的数值，阶码=指数+1023 (科学计数法中的指数是可以为负数的，所以约定减去一个中间数 1023，[0,1022] 表示为负，[1024,2047] 表示为正)。</p></div>现在我们知道了一个数是如何存储的，那么我们来想一个问题，1.3转化为二进制是多少<code>0.010011001100....1100</code>，对的你发现了他的小数部分除不尽，那么意味着他的小数部分用64位表示不完。我们来看一下浏览器是如何处理的。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1.3</span> </span><br><span class="line"><span class="built_in">console</span>.log(a.toString(<span class="number">2</span>))</span><br></pre></td></tr></table></figure>输出的结果是 <strong>1.010011001100110011001100110011001100110011001100110011</strong><br>我们来比较一下浏览器计算的1.3和我们手算的1.3的差别<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">浏览器： 1.0100110011001100110011001100110011001100110011001101</span><br><span class="line">手 算 ： 1.0100110011001100110011001100110011001100110011001100*1100*</span><br></pre></td></tr></table></figure></li></ul><p>我们看到浏览器进行了进位操作，浏览器执行的是满1进位，不满则省略的方案<br>所以这也就是为什么我们在进行浮点数运算的时候有时候得不到精确的数值的原因所在了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://zhuanlan.zhihu.com/p/30703042</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;JavaScript中数字是不区分整数值与浮点数值的，在JavaScript中所有的数均使用64位的浮点格式来存储以及表示（IEEE 754标准）。所以数值最大是：±1.7976931348623157 X 10^308最小是±5X10^-324，可以表示的整数范围是-9 007 199 254 740 992~9 007 199 254 740 992 （对应的是-2^53~2^53）包含边界值。&lt;br&gt;&lt;div class=&quot;note danger&quot;&gt;&lt;p&gt;注意：在对js中的数值进行位操作的时候会自动把64位转化为32进行操作，在对小数进行位操作 比如左移零位，小数会丢弃小数部分转化成整数 &lt;/p&gt;&lt;/div&gt;&lt;br&gt;
+    
     </summary>
     
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="数字" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%97/"/>
+    
+      <category term="存储" scheme="http://yoursite.com/tags/%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
@@ -51,28 +63,6 @@
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
       <category term="markdown语法" scheme="http://yoursite.com/tags/markdown%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript中的数字存储</title>
-    <link href="http://yoursite.com/2018/06/29/JavaScript-number/"/>
-    <id>http://yoursite.com/2018/06/29/JavaScript-number/</id>
-    <published>2018-06-29T12:19:21.000Z</published>
-    <updated>2018-06-29T13:39:03.348Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="js基础" scheme="http://yoursite.com/categories/js%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
-    
-      <category term="数字" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%97/"/>
-    
-      <category term="存储" scheme="http://yoursite.com/tags/%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   

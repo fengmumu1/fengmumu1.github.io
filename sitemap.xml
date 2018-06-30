@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/06/30/js-number/</loc>
+    
+    <lastmod>2018-06-30T15:54:20.985Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/06/28/fist%20document/</loc>
     
     <lastmod>2018-06-30T04:18:33.595Z</lastmod>
@@ -12,20 +19,6 @@
     <loc>http://yoursite.com/2018/06/29/hexo-markdown-grammar/</loc>
     
     <lastmod>2018-06-30T04:16:57.048Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/06/29/JavaScript-number/</loc>
-    
-    <lastmod>2018-06-29T13:39:03.348Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/06/29/js-number/</loc>
-    
-    <lastmod>2018-06-29T13:02:48.423Z</lastmod>
     
   </url>
   
