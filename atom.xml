@@ -5,9 +5,9 @@
   <subtitle>We are here to put a dent in the universe</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2018-07-02T03:39:30.873Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://fengmumu1.github.io/"/>
+  <updated>2018-07-02T04:14:23.791Z</updated>
+  <id>https://fengmumu1.github.io/</id>
   
   <author>
     <name>丰林</name>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>tip_copyright</title>
-    <link href="http://yoursite.com/2018/07/02/tip-copyright/"/>
-    <id>http://yoursite.com/2018/07/02/tip-copyright/</id>
+    <link href="https://fengmumu1.github.io/2018/07/02/tip-copyright/"/>
+    <id>https://fengmumu1.github.io/2018/07/02/tip-copyright/</id>
     <published>2018-07-02T02:22:30.000Z</published>
-    <updated>2018-07-02T03:39:30.873Z</updated>
+    <updated>2018-07-02T04:14:23.791Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用ntxo加入版权信息"><a href="#使用ntxo加入版权信息" class="headerlink" title="使用ntxo加入版权信息"></a>使用ntxo加入版权信息</h1><p>看到别人的的博客下面都有版权信息（就是本文最底下的那个啦），然后自己也想加上一个，搜了一下都是17年的老文章，用的是自定义的方法。<br>本来打算去DIY一下，然后突发奇想去主题插件搜了一下版权（copyright），然后发现了这个东西<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">post_copyright:</span><br><span class="line">  enable: false</span><br><span class="line">.....</span><br></pre></td></tr></table></figure></p><p>就把那个<code>enable: false</code> 改成<code>enable: true</code> 就好啦</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="使用ntxo加入版权信息"><a href="#使用ntxo加入版权信息" class="headerlink" title="使用ntxo加入版权信息"></a>使用ntxo加入版权信息</h1><p>看到别人的的博客下面都有版权信息（就是本文最底下的那个啦），然后自己也想加上一个，搜了一下都是17年的老文章，用的是自定义的方法。<br>本来打算去DIY一下，然后突发奇想去主题插件搜了一下版权（copyright），然后发现了这个东西<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">post_copyright:</span><br><span class="line">  enable: false</span><br><span class="line">.....</span><br></pre></td></tr></table></figure></p><p>就把那个<code>enable: false</code> 改成<code>enable: true</code> 就好啦<br><code>`</code></p><hr><p>ps:如果底下的版权信息中的本文链接：成了<code>http://yoursite.com/2018/07/02/tip-copyright</code>这个样子<br>只需要在网站配置文件下把url: <a href="http://yoursite.com" target="_blank" rel="noopener">http://yoursite.com</a> 改成url: <a href="https://fengmumu1.github.io">https://fengmumu1.github.io</a> 就好啦</p><p>有一篇博文还可以，就是关于next配置的，链接如下：<br><a href="http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html" target="_blank" rel="noopener">http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html</a></p><hr>]]></content>
     
     <summary type="html">
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://fengmumu1.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://fengmumu1.github.io/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript中的数字存储</title>
-    <link href="http://yoursite.com/2018/06/30/js-number/"/>
-    <id>http://yoursite.com/2018/06/30/js-number/</id>
+    <link href="https://fengmumu1.github.io/2018/06/30/js-number/"/>
+    <id>https://fengmumu1.github.io/2018/06/30/js-number/</id>
     <published>2018-06-30T08:07:05.000Z</published>
     <updated>2018-07-02T02:14:08.429Z</updated>
     
@@ -53,21 +53,21 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://fengmumu1.github.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://fengmumu1.github.io/tags/JavaScript/"/>
     
-      <category term="数字" scheme="http://yoursite.com/tags/%E6%95%B0%E5%AD%97/"/>
+      <category term="数字" scheme="https://fengmumu1.github.io/tags/%E6%95%B0%E5%AD%97/"/>
     
-      <category term="存储" scheme="http://yoursite.com/tags/%E5%AD%98%E5%82%A8/"/>
+      <category term="存储" scheme="https://fengmumu1.github.io/tags/%E5%AD%98%E5%82%A8/"/>
     
   </entry>
   
   <entry>
     <title>hexo下的markdown语法</title>
-    <link href="http://yoursite.com/2018/06/29/hexo-markdown-grammar/"/>
-    <id>http://yoursite.com/2018/06/29/hexo-markdown-grammar/</id>
+    <link href="https://fengmumu1.github.io/2018/06/29/hexo-markdown-grammar/"/>
+    <id>https://fengmumu1.github.io/2018/06/29/hexo-markdown-grammar/</id>
     <published>2018-06-29T12:53:40.000Z</published>
     <updated>2018-06-30T04:16:57.048Z</updated>
     
@@ -79,19 +79,19 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://fengmumu1.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://fengmumu1.github.io/tags/hexo/"/>
     
-      <category term="markdown语法" scheme="http://yoursite.com/tags/markdown%E8%AF%AD%E6%B3%95/"/>
+      <category term="markdown语法" scheme="https://fengmumu1.github.io/tags/markdown%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>第一个文件</title>
-    <link href="http://yoursite.com/2018/06/28/fist%20document/"/>
-    <id>http://yoursite.com/2018/06/28/fist document/</id>
+    <link href="https://fengmumu1.github.io/2018/06/28/fist%20document/"/>
+    <id>https://fengmumu1.github.io/2018/06/28/fist document/</id>
     <published>2018-06-28T11:57:29.000Z</published>
     <updated>2018-07-02T02:21:06.684Z</updated>
     
@@ -103,10 +103,10 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://fengmumu1.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="https://fengmumu1.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
