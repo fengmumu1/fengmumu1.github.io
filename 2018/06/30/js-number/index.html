@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/06/30/js-number/64w.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/06/30/js-number/da.jpg">
-<meta property="og:updated_time" content="2018-07-01T07:36:09.000Z">
+<meta property="og:updated_time" content="2018-07-02T01:23:42.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中的数字存储">
 <meta name="twitter:description" content="JavaScript中数字是不区分整数值与浮点数值的，在JavaScript中所有的数均使用64位的浮点格式来存储以及表示（IEEE 754标准）。所以数值最大是：±1.7976931348623157 X 10^308最小是±5X10^-324，可以表示的整数范围是-9 007 199 254 740 992~9 007 199 254 740 992 （对应的是-2^53~2^53）包含边界值">
@@ -468,6 +468,9 @@
 <li>Infinity 指的是，所有大于等于 0xfffffffffffffc0000… 的数。</li>
 </ol>
 <footer><strong>@lifesinger</strong><cite><a href="https://lifesinger.wordpress.com/2011/03/07/js-precision/" target="_blank" rel="noopener">lifesinger.wordpress.com/2011/03/07/js-precision</a></cite></footer></blockquote></p>
+<hr>
+<p>更新一个知识点： Number.EPSILON 是一个整数，然后与这个整数大的第一个数的差值<br>也就是说如果两个数的差值小于  Number.EPSILON  这两个数就是一个数</p>
+<hr>
 <p>参考文档</p>
 <hr>
 <ol>
