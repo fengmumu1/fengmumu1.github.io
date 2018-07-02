@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[发现个异或的妙用]]></title>
+    <url>%2F2018%2F07%2F02%2FSingle-Number%2F</url>
+    <content type="text"><![CDATA[有个题目是这样子的：Single Number题目要求如下：Given a non-empty array of integers, every element appears twice except for one. Find that single one.Note:Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?意思就是一个数组[2，2，3，3，5] 5就是那个 single numble了然后自己想了半天也就会本办法，倒也能通过，然后看了一下前面人的解法,又一次打开了脑洞大佬的代码如下：12345678910var singleNumber = function(nums) &#123; if (!nums || nums.length === 0) &#123; throw new Error(); &#125; var res = nums[0]; for (var i = 1; i &lt; nums.length; i++) &#123; res ^= nums[i]; &#125; return res;&#125;;一开始我还没有看懂为什么异或就可以，不就是相同为0，不同为1啊，然后单步进去运行了一下，还是一头雾水（单步的时候res没有规律），出去上个厕所，喝口水。然后突然想到，从把数组所有的数字全拿出来，一个一个异或，可以看成相同的和相同的异或，然后得到的是0 ，最后剩下一个奇数的single number，把他和0异或（^）就得到他本身啊。 多动动，多喝水，没事上个厕所，买个小黄鸭，换个角度，问题就迎刃而解啊啊啊啊啊啊！！！！]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>算法</tag>
+        <tag>思路</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[从Power_of_Two所得]]></title>
     <url>%2F2018%2F07%2F02%2Fleetode-Power-of-Two-think%2F</url>
     <content type="text"><![CDATA[开始刷leetcode上的题目了，毕竟写程序也是需要开脑洞的，刷题目就能让自己脑洞越来越大的说，这不发现了一个题目： Power of Two题目要求：Given an integer, write a function to determine if it is a power of two.其实就是让你看一个数是不是2的幂次方 先说我的思路吧，一个数一直除以2，除到他小于4的时候，2的幂方数就是只有 2 1 这两个数字了，那么我判断一下是不是他俩就好啦123456789101112131415161718192021var isPowerOfTwo = function (n) &#123; var wx = n var falg = 0 while (falg == 0) &#123; // wx = wx &gt;&gt; 1 wx = wx / 2 if (wx &lt; 4) &#123; //需要考虑一开始就是1的情况 if (wx == 2 || wx == 1 || wx == 0.5) &#123; falg = 1 // console.log("true") return true &#125; else &#123; falg = 2 // console.log("false") return false &#125; &#125; &#125;&#125;; 然后看了看别人的代码，发现了一个很棒的思路，思路就是看 n 与 n-1 与出来的结果是不是 0我们看一下 4 二进制是：0100 那么3呢，3是 0011，二者与出来就是0，所以这个思路太赞了，一下子就得出结果了。代码是没有的，思路都有了，代码还写不出来吗！ 又发现了个看数字是不是4的幂的题我的想法是 先看他是不是2的幂，再看他是不是小于10，小于的话，等不等于 4 或者 8然后发现了一个想法是，先看是不是2 的幂，然后看能不能整除4然后又发现了个是不是3的幂的数，我的思路是利用数学规则（各个位相加为三的倍数）看他是不是能被3整除，能的话就除以3，用结果继续这样子判断，一直到他小于10的时候，看是不是 3 或者 9结果发现了一个更惊为天人的思路，思路是这样子的，把可以取值范围内的最大3的幂数求出来，记为 a , 然后给个数字b 如果 a % b === 0那b就是3的幂数，没有想到的话看下面123a = 3 * 3 * 3 * 3 * 3 *3 *3 b = 3 * 3 * 3 c = 3 * 3 * 4 这个就很直观了吧！]]></content>
