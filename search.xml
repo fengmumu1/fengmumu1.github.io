@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[tip_copyright]]></title>
+    <title><![CDATA[给文章加入版权信息]]></title>
     <url>%2F2018%2F07%2F02%2Ftip-copyright%2F</url>
     <content type="text"><![CDATA[使用ntxo加入版权信息看到别人的的博客下面都有版权信息（就是本文最底下的那个啦），然后自己也想加上一个，搜了一下都是17年的老文章，用的是自定义的方法。本来打算去DIY一下，然后突发奇想去主题插件搜了一下版权（copyright），然后发现了这个东西123post_copyright: enable: false..... 就把那个enable: false 改成enable: true 就好啦` ps:如果底下的版权信息中的本文链接：成了http://yoursite.com/2018/07/02/tip-copyright这个样子只需要在网站配置文件下把url: http://yoursite.com 改成url: https://fengmumu1.github.io 就好啦 有一篇博文还可以，就是关于next配置的，链接如下：http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html]]></content>
       <categories>
