@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript,递归,栈," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="丰林的个人博客,有一些网站的知识和前端学习随笔">
-<meta name="keywords" content="博客,前端,网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="丰木木de学习计划">
-<meta property="og:url" content="https://fengmumu1.github.io/tags/markdown语法/index.html">
+<meta name="description" content="一个递归引发的血案案发现场今天看到了递归，测试的时候必须是经典的  Fibonacci （斐波纳契） 数列,然后我做的时候的代码如下：1234function Fibonacci (n) &amp;#123;  if ( n &amp;lt;= 1 ) &amp;#123;return 1&amp;#125;;  return Fibonacci(n - 1) + Fibonacci(n - 2);&amp;#125;这是一个很简答的递">
+<meta name="keywords" content="JavaScript,递归,栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript的递归以及浅谈尾调用">
+<meta property="og:url" content="https://fengmumu1.github.io/2018/07/03/JavaScript-tail-Call/index.html">
 <meta property="og:site_name" content="丰木木de学习计划">
-<meta property="og:description" content="丰林的个人博客,有一些网站的知识和前端学习随笔">
+<meta property="og:description" content="一个递归引发的血案案发现场今天看到了递归，测试的时候必须是经典的  Fibonacci （斐波纳契） 数列,然后我做的时候的代码如下：1234function Fibonacci (n) &amp;#123;  if ( n &amp;lt;= 1 ) &amp;#123;return 1&amp;#125;;  return Fibonacci(n - 1) + Fibonacci(n - 2);&amp;#125;这是一个很简答的递">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-03T15:52:20.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="丰木木de学习计划">
-<meta name="twitter:description" content="丰林的个人博客,有一些网站的知识和前端学习随笔">
+<meta name="twitter:title" content="JavaScript的递归以及浅谈尾调用">
+<meta name="twitter:description" content="一个递归引发的血案案发现场今天看到了递归，测试的时候必须是经典的  Fibonacci （斐波纳契） 数列,然后我做的时候的代码如下：1234function Fibonacci (n) &amp;#123;  if ( n &amp;lt;= 1 ) &amp;#123;return 1&amp;#125;;  return Fibonacci(n - 1) + Fibonacci(n - 2);&amp;#125;这是一个很简答的递">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://fengmumu1.github.io/tags/markdown语法/"/>
+  <link rel="canonical" href="https://fengmumu1.github.io/2018/07/03/JavaScript-tail-Call/"/>
 
 
 
 
 
-  <title>标签: markdown语法 | 丰木木de学习计划</title>
+  <title>JavaScript的递归以及浅谈尾调用 | 丰木木de学习计划</title>
   
 
 
@@ -156,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,54 +285,278 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>markdown语法<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengmumu1.github.io/2018/07/03/JavaScript-tail-Call/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="丰林">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="丰木木de学习计划">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/06/29/hexo-markdown-grammar/" itemprop="url">
-              
-                <span itemprop="name">hexo下的markdown语法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JavaScript的递归以及浅谈尾调用</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-29T20:53:40+08:00"
-              content="2018-06-29" >
-          06-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-03T21:52:59+08:00">
+                2018-07-03
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/03/JavaScript-tail-Call/" class="leancloud_visitors" data-flag-title="JavaScript的递归以及浅谈尾调用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,747
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一个递归引发的血案"><a href="#一个递归引发的血案" class="headerlink" title="一个递归引发的血案"></a>一个递归引发的血案</h3><h4 id="案发现场"><a href="#案发现场" class="headerlink" title="案发现场"></a>案发现场</h4><p>今天看到了递归，测试的时候必须是经典的  <a href="https://www.baidu.com/link?url=K3gRN6fMUN_l6_8f7UiOQoRhsa5v0LEQzjwKOJkpuNiywF3ivK9ELpd2KW-A8KCn888Ekr6Xv70ZjRguMF5Gn7fhzOfVyMUleJaW5QC-zdJIINMXZGP-Nx945Pox-L_JYVUX5_adWxCpUDqVOEgu5_&amp;wd=&amp;eqid=ccb3c7a0000077f8000000045b3b813f" target="_blank" rel="noopener">Fibonacci （斐波纳契） 数列</a>,然后我做的时候的代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fibonacci</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> ( n &lt;= <span class="number">1</span> ) &#123;<span class="keyword">return</span> <span class="number">1</span>&#125;;</span><br><span class="line">  <span class="keyword">return</span> Fibonacci(n - <span class="number">1</span>) + Fibonacci(n - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这是一个很简答的递归函数，单纯且不做作。他很简单，看一眼就知道他是如何运算的，单纯到到计算一个Fibonacci(100)就给我来个栈溢出错误(stack overflow)，然后我很奇葩的算了一下Fibonacci(25)，然后就卡-住-了，这不行啊，所以我就去搜原因去咯。<br><a id="more"></a></p>
+<h4 id="抢救现场"><a href="#抢救现场" class="headerlink" title="抢救现场"></a>抢救现场</h4><p>找了一下，找了一个有优化效果的函数：<br><figure class="highlight javascript"><figcaption><span>尾递归优化后的程序</span><a href="http://phpstudy.php.cn/c.php/107851.html" target="_blank" rel="noopener">源程序连接</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fibArr =[<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fibonacci</span>(<span class="params">n</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span>  fibArr[n]? fibArr[n]:(fibArr[n]=Fibonacci(n<span class="number">-1</span>)+Fibonacci(n<span class="number">-2</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="案件复盘"><a href="#案件复盘" class="headerlink" title="案件复盘"></a>案件复盘</h4><p>嗯，解释这个程序的思想之前我们先来看一下我们以前的程序都干了什么，在这之前我们先来补充一个小知识点：<br><blockquote><p>我们知道，函数调用会在内存形成一个“调用记录”，又称“调用帧”（call frame），保存调用位置和内部变量等信息。如果在函数A的内部调用函数B，那么在A的调用帧上方，还会形成一个B的调用帧。等到B运行结束，将结果返回到A，B的调用帧才会消失。如果函数B内部还调用函数C，那就还有一个C的调用帧，以此类推。所有的调用帧，就形成一个“调用栈”（call stack）。</p>
+<footer><strong>@阮一峰</strong><cite><a href="http://es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&x=0&y=0#docs/function" target="_blank" rel="noopener">es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&x=0&y=0#docs/function</a></cite></footer></blockquote><br><blockquote class="blockquote-center"><p>通过上面我们知道了，要是每次调用都会在内存生成一个调用帧，然后我们看一下Fibonacci数列，我们单步进入程序的时候（或者在纸上画一下）可以发现，我们一开始的程序在计算的时候会压入很多重复的计算，也就是说很多调用帧的返回结果是相同的，但是我们还是把他们压入到了调用栈里面，（函数先计算+左边的，然后就不断的进入函数内部，不断的压栈，计算完成后再一层一层的往回出栈，等到+左边的计算完了，再来右边的，你会发现右边的很多调用帧的结果刚才都算出来了，可是在算+左边结果的时候又把它们清除了，这样子是不是浪费了大把的时间）这样一来就是两个结果，栈不够用爆掉啦，栈将将够用，然后程序慢慢进再慢慢的出，这时候好的电脑运行会变慢，差的电脑就会卡住或者死机，让我哭一会。</p>
+</blockquote></p>
+<h3 id="引入尾调用"><a href="#引入尾调用" class="headerlink" title="引入尾调用"></a>引入尾调用</h3><p>我哭好了，我们继续看优化后的函数，优化后的函数优化就是优化了重复的那个一部分，我们用数组来存储+左边我们每一个调用帧计算的结果，到计算+右边的时候我们直接和数组里面的数字（注意那个n）进行比对,准确的说是看参数是否相同，相同的话就直接出返回结果而不进栈了。<br>这里其实用到了一点缓存区的概念（这个我们有空再聊哈），我们这样子优化的直接效果就是进去的调用帧少了，直接结果是栈不会爆了，也没有了多余的重复计算，速度直接就上去了。<br>那么问题来了，是不是递归都会有这个问题，答案是：一些形式的递归是的，这个由JavaScript的栈机制造成的。<br>是不是要说，一些形式是的，那不就是还有形式不是，好了，我要开始装逼了，那个形式就是：尾调用。<br>直接上阮一峰大佬的解释：<br><blockquote><p>尾调用（Tail Call）是函数式编程的一个重要概念，本身非常简单，一句话就能说清楚，就是指某个函数的最后一步是调用另一个函数。</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> g(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>上面代码中，函数f的最后一步是调用函数g，这就叫尾调用。<br>以下三种情况，都不属于尾调用。</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 情况一</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> y = g(x);</span><br><span class="line">  <span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 情况二</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> g(x) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 情况三</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  g(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>上面代码中，情况一是调用函数g之后，还有赋值操作，所以不属于尾调用，即使语义完全一样。情况二也属于调用后还有操作，即使写在一行内。情况三等同于下面的代码。</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  g(x);</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>尾调用不一定出现在函数尾部，只要是最后一步操作即可。</p>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> m(x)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> n(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>上面代码中，函数m和n都属于尾调用，因为它们都是函数f的最后一步操作。</p>
+<footer><strong>@阮一峰</strong><cite><a href="http://es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&x=0&y=0#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96" target="_blank" rel="noopener">es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&x=0&y=0#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96</a></cite></footer></blockquote></p>
+<h3 id="关于尾调用的优化"><a href="#关于尾调用的优化" class="headerlink" title="关于尾调用的优化"></a>关于尾调用的优化</h3><p>好了现在知道了尾调用，按道理我应该引入尾调用的优化，毕竟ES6第一次明确规定，所有 ECMAScript 的实现，都必须部署“尾调用优化”。这就是说，ES6 中只要使用尾递归，就不会发生栈溢出，相对节省内存。<br>也就是说，尾调用是一写法形式，写成这样子，浏览器会自动进行优化（不过目前只有苹果的才支持，其它的浏览器需要在严格模式下才执行这个操作），又或者我们可以写一个函数，自己来做这个尾调用优化，但是我依稀还记得 Eloquent_JavaScript（第二版） 中有一句话：<br><blockquote><p>The dilemma of speed versus elegance is an interesting one. You can see it as a kind of continuum between human-friendliness and machinefriendliness. Almost any program can be made faster by making it bigger and more convoluted. The programmer must decide on an appropriate balance.</p>
+<footer><strong>Marijn Haverbeke</strong><cite>Eloquent_JavaScript</cite></footer></blockquote><br>或许以后真的业务需要我会这样子写函数，但是能避免这样子我还是会避免的，毕竟循环比递归快的说，自己优化的方式也只是把递归转化成循环，当然如果后面大多数的主流的浏览器都开始支持在正常模式下也自动优化，我也会食言而肥呢，毕竟上善若水的原因是水无常形的说。</p>
+<p>以下是本博文参考的资料，感谢他们的分享</p>
+<hr>
+<p>阮一峰大佬的：<a href="http://es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&amp;x=0&amp;y=0#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96" target="_blank" rel="noopener">ECMAScript 6入门</a><br><a href="http://phpstudy.php.cn/c.php/107851.html" target="_blank" rel="noopener">phpstudy的文章</a><br><a href="https://blog.csdn.net/jxgz_leo/article/details/53208524" target="_blank" rel="noopener">jxgz_leo的博客</a>。关于尾数调用优化，这个博文写的比阮大佬能详细</p>
+<hr>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感觉不错的话给博主赞助一下呗</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="丰林 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="丰林 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    丰林
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://fengmumu1.github.io/2018/07/03/JavaScript-tail-Call/" title="JavaScript的递归以及浅谈尾调用">https://fengmumu1.github.io/2018/07/03/JavaScript-tail-Call/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/递归/" rel="tag"># 递归</a>
+          
+            <a href="/tags/栈/" rel="tag"># 栈</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/02/Single-Number/" rel="next" title="发现个异或的妙用">
+                <i class="fa fa-chevron-left"></i> 发现个异或的妙用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -339,6 +564,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzc1Mi8xNDI4Mw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -359,8 +593,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -443,6 +686,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个递归引发的血案"><span class="nav-number">1.</span> <span class="nav-text">一个递归引发的血案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#案发现场"><span class="nav-number">1.1.</span> <span class="nav-text">案发现场</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抢救现场"><span class="nav-number">1.2.</span> <span class="nav-text">抢救现场</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#案件复盘"><span class="nav-number">1.3.</span> <span class="nav-text">案件复盘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入尾调用"><span class="nav-number">2.</span> <span class="nav-text">引入尾调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于尾调用的优化"><span class="nav-number">3.</span> <span class="nav-text">关于尾调用的优化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -585,6 +844,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -613,6 +876,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
