@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="丰木木de学习计划">
 <meta property="og:description" content="一个递归引发的血案案发现场今天看到了递归，测试的时候必须是经典的  Fibonacci （斐波纳契） 数列,然后我做的时候的代码如下：1234function Fibonacci (n) &amp;#123;  if ( n &amp;lt;= 1 ) &amp;#123;return 1&amp;#125;;  return Fibonacci(n - 1) + Fibonacci(n - 2);&amp;#125;这是一个很简答的递">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T15:52:20.788Z">
+<meta property="og:updated_time" content="2018-07-04T03:11:07.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript的递归以及浅谈尾调用">
 <meta name="twitter:description" content="一个递归引发的血案案发现场今天看到了递归，测试的时候必须是经典的  Fibonacci （斐波纳契） 数列,然后我做的时候的代码如下：1234function Fibonacci (n) &amp;#123;  if ( n &amp;lt;= 1 ) &amp;#123;return 1&amp;#125;;  return Fibonacci(n - 1) + Fibonacci(n - 2);&amp;#125;这是一个很简答的递">
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,747
+                  1,963
                 </span>
               
 
@@ -442,10 +442,17 @@
 <p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> m(x)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> n(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>上面代码中，函数m和n都属于尾调用，因为它们都是函数f的最后一步操作。</p>
 <footer><strong>@阮一峰</strong><cite><a href="http://es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&x=0&y=0#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96" target="_blank" rel="noopener">es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&x=0&y=0#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96</a></cite></footer></blockquote></p>
 <h3 id="关于尾调用的优化"><a href="#关于尾调用的优化" class="headerlink" title="关于尾调用的优化"></a>关于尾调用的优化</h3><p>好了现在知道了尾调用，按道理我应该引入尾调用的优化，毕竟ES6第一次明确规定，所有 ECMAScript 的实现，都必须部署“尾调用优化”。这就是说，ES6 中只要使用尾递归，就不会发生栈溢出，相对节省内存。<br>也就是说，尾调用是一写法形式，写成这样子，浏览器会自动进行优化（不过目前只有苹果的才支持，其它的浏览器需要在严格模式下才执行这个操作），又或者我们可以写一个函数，自己来做这个尾调用优化，但是我依稀还记得 Eloquent_JavaScript（第二版） 中有一句话：<br><blockquote><p>The dilemma of speed versus elegance is an interesting one. You can see it as a kind of continuum between human-friendliness and machinefriendliness. Almost any program can be made faster by making it bigger and more convoluted. The programmer must decide on an appropriate balance.</p>
-<footer><strong>Marijn Haverbeke</strong><cite>Eloquent_JavaScript</cite></footer></blockquote><br>或许以后真的业务需要我会这样子写函数，但是能避免这样子我还是会避免的，毕竟循环比递归快的说，自己优化的方式也只是把递归转化成循环，当然如果后面大多数的主流的浏览器都开始支持在正常模式下也自动优化，我也会食言而肥呢，毕竟上善若水的原因是水无常形的说。</p>
+<footer><strong>Marijn Haverbeke</strong><cite>Eloquent_JavaScript</cite></footer></blockquote><br>其实自己进行优化的方式也只是把递归转化成循环的样子，有的人会坚持尽可能的用循环而不是用递归，应为为达到同样的效果用循环更快，其实二者那个好都说不好的，或许等到浏览器都支持在正常模式下也进行尾递归优化的时候，递归就用的越来越多了，毕竟他有其独到的优势哈。<br>最后附上一个写递归函数的规则：<br><blockquote><p>当编写递归例程的时候，关键是要牢记递归的四条基本法则:</p>
+<ol>
+<li>基准情形。必须总有某些基准情形，它无须递归就能解出。[I [</li>
+<li>不断推进。对于那些需要递归求解的情形嗯每一次递归调用都必须要使求解状况朝接L!..Li<br>近基准情形的方向推进。</li>
+<li>设计法则。假设所有的递归调用都能运行。</li>
+<li>合成效益法则(ωmpound interest rule ) 。在求解一个问题的同一实例时，切勿在不同<br>的递归调用中做重复性的工作。</li>
+</ol>
+<footer><strong>Mark Allen Weiss·著 冯舜玺·译</strong><cite>数据结构与算法分析：C语言描述（第2版）</cite></footer></blockquote></p>
 <p>以下是本博文参考的资料，感谢他们的分享</p>
 <hr>
-<p>阮一峰大佬的：<a href="http://es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&amp;x=0&amp;y=0#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96" target="_blank" rel="noopener">ECMAScript 6入门</a><br><a href="http://phpstudy.php.cn/c.php/107851.html" target="_blank" rel="noopener">phpstudy的文章</a><br><a href="https://blog.csdn.net/jxgz_leo/article/details/53208524" target="_blank" rel="noopener">jxgz_leo的博客</a>。关于尾数调用优化，这个博文写的比阮大佬能详细</p>
+<p>数据结构与算法分析：C语言描述（第2版）<br>阮一峰大佬的：<a href="http://es6.ruanyifeng.com/?search=%E9%80%92%E5%BD%92&amp;x=0&amp;y=0#docs/function#%E5%B0%BE%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96" target="_blank" rel="noopener">ECMAScript 6入门</a><br><a href="http://phpstudy.php.cn/c.php/107851.html" target="_blank" rel="noopener">phpstudy的文章</a><br><a href="https://blog.csdn.net/jxgz_leo/article/details/53208524" target="_blank" rel="noopener">jxgz_leo的博客</a>。关于尾数调用优化，这个博文写的比阮大佬能详细</p>
 <hr>
 
       
@@ -730,7 +737,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.0k</span>
+    <span title="Site words total count">8.3k</span>
   
 </div>
 
