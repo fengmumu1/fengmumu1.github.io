@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="丰木木de学习计划">
 <meta property="og:description" content="发现一个有意思的问题，有下面一段代码123function f(x, y)&amp;#123;  console.log(x + y)&amp;#125;(3,4)我们把它输入到firebug下的命令控制台里面，回车之后会输出什么？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-07T03:11:37.248Z">
+<meta property="og:updated_time" content="2018-07-07T10:59:54.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈立即执行函数">
 <meta name="twitter:description" content="发现一个有意思的问题，有下面一段代码123function f(x, y)&amp;#123;  console.log(x + y)&amp;#125;(3,4)我们把它输入到firebug下的命令控制台里面，回车之后会输出什么？">
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  980
+                  1,004
                 </span>
               
 
@@ -442,7 +442,8 @@
 </ul>
 <footer><strong>@Kelichao</strong><cite><a href="https://github.com/Kelichao/javascript.basics/issues/19" target="_blank" rel="noopener">github.com/Kelichao/javascript.basics/issues/19</a></cite></footer></blockquote>
 <h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p>在我们使用函数表达式来声明函数的时候，b指向的就是函数，我们要执行函数的时候就是b()。那么b的内容是什么 ？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">我们把b的内容打印出来b == function() &#123;</span><br><span class="line">                          console.log(&quot;b函数声明&quot;)</span><br><span class="line">                        &#125;</span><br><span class="line">我们是不是想到了，如果 function() &#123;</span><br><span class="line">                        console.log(&quot;b函数声明&quot;)</span><br><span class="line">                      &#125;() </span><br><span class="line">是不是也可以让函数得到执行，我们把这种执行叫做立即执行函数，不过此处有个坑。</span><br><span class="line">他会报错`token(`，因为function是个关键字，编译器在编译的时候，如果以function开头那么</span><br><span class="line">就应该以&#125;结尾，但是咱么以)结尾了，所以我们只需要不让function开头就好啦，我们可以</span><br><span class="line">给function前面放!/+/-或者用一个()把function() &#123;</span><br><span class="line">                                    console.log(&quot;b函数声明&quot;)</span><br><span class="line">                                  &#125;() </span><br><span class="line">整个包起来，或者只包裹函数声明的那一部分，不过用!/+ /-有可能改变函数的返回值，同时为了更</span><br><span class="line">符合函数的定义所以我们一般用()把函数声明的那一部分包起来，就变成了</span><br><span class="line">&#123;% codeblock lang:Javascript %&#125;</span><br><span class="line">(function f()&#123;</span><br><span class="line">  console.log(&quot;xxx&quot;)</span><br><span class="line">&#125;)()</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>IIFE（Immediately Invoked Function Expression），立即执行函数表达式<br>javascript中没用私有作用域的概念，如果在多人开发的项目上，你在全局或局部作用域中声明了一些变量，可能会被其他人不小心用同名的变量给覆盖掉，</p>
+<hr>
+<p>有关立即执行函数以及闭包等，等以后知识库充足了再写<br>IIFE（Immediately Invoked Function Expression），立即执行函数表达式<br>javascript中没用私有作用域的概念，如果在多人开发的项目上，你在全局或局部作用域中声明了一些变量，可能会被其他人不小心用同名的变量给覆盖掉，</p>
 <p>根据javascript函数作用域链的特性，可以使用这种技术可以模仿一个私有作用域，用匿名函数作为一个“容器”，“容器”内部可以访问外部的变量，</p>
 <p>而外部环境不能访问“容器”内部的变量，所以( function(){…} )()内部定义的变量不会和外部的变量发生冲突，俗称“匿名包裹器”或“命名空间”。</p>
 
@@ -534,6 +535,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/07/07/hexo-ftp/" rel="prev" title="hexo-ftp">
+                hexo-ftp <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -614,7 +619,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -636,7 +641,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -726,7 +731,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">10.9k</span>
+    <span title="Site words total count">11.3k</span>
   
 </div>
 
