@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[leetcode之Counting_Bits]]></title>
+    <url>%2F2018%2F07%2F07%2FCounting-Bits%2F</url>
+    <content type="text"><![CDATA[Counting_BitsGiven a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array. Example:For num = 5 you should return [0,1,1,2,1,2]. Follow up: It is very easy to come up with a solution with run time O(n*sizeof(integer)). But can you do it in linear time O(n) /possibly in a single pass? Space complexity should be O(n). Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.Credits:Special thanks to @ syedee for adding this problem and creating all test cases.题目如上，就是给你一个数字，让给输出从0到这个数字之间所有数字转化为二进制后1的个数。12345678910111213141516171819202122// 0 0000 0 // 1 0001 1 // 2 0010 1// 3 0011 2// 4 0100 1// 5 0101 2// 6 0110 2// 7 0111 3// ------------- // 8 1000 1 // 9 1001 2 // 10 1010 2 // 11 1011 3 // 12 1100 2 // 13 1101 3// 14 1110 3// 15 1111 4// 16 10000 1// 17 10001 2// 31 1 1111 5// 63 11 1111 6 解法一：12345678var countBits = function(num) &#123; debugger var res = [0] for (var i = 1; i &lt;= num; ++i) &#123; if (i % 2 == 0) res.push(res[parseInt(i / 2)]) else res.push(res[parseInt((i / 2))] + 1) &#125; return res解题思路：从1开始，遇到偶数时，其1的个数和该偶数除以2得到的数字的1的个数相同， 遇到奇数时，其1的个数等于该奇数除以2得到的数字的1的个数然后再加上1第二种思路：1234567var countBits = function(num) &#123; debugger var res = [0] for (int i = 1; i &lt;= num; ++i) &#123; res[i] = res[i &amp; (i - 1)] + 1; &#125; return res解题思路：每个i值都是i&amp;(i-1)对应的值加1 （简单暴力，神奇的n与n-1） 第二种参考自Grandyangde的博客:]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用ftp方式上传博客]]></title>
     <url>%2F2018%2F07%2F07%2Fhexo-ftp%2F</url>
-    <content type="text"><![CDATA[在github上传博客，有时候会失败，而且速度也很慢，所以就想放到国内的服务器上，怎奈何囊中羞涩买不起服务器，手里正好有个云主机，所以就用ftp的形式上传hexo的静态文件啦先放上hexo的官方文档的传送门点我先在你的bloge目录运行如下代码：1$ npm install hexo-deployer-ftpsync --save 然后在站点配置文件找到deploy:我的配置是这样子的：123456789101112131415deploy:- type: git repo: xxxxxxxx branch: master- type: ftpsync host: xxxxx #主机地址 user: xxxx #用户名 pass: xxxx #密码 //注意我用的是阿里云的云主机，按照他的规定我必须把文件放到根目录下的htdocs文件夹内 remote: /htdocs/ #上传到空间的指定目录。比如/public_html/。默认为/ port: 21 #端口，默认为21 //logreport 也是云主机的文件，无法删除，需要忽略它，都则会报错 ignore: [/logreport] #忽略的文件 connections: 1 #使用的连接数，默认1 verbose: true #显示调试信息，默认false hexo本身支持多站点上传，所以我们不去要删除以前的上传方式，不过注意正确的缩进以及空格 由于使用ftpsync上传，每次都会删除以前的文件，所以把你没有权限删除的以及不想删除或者修改的文件写到ignore这里，ignore: [“/s”,”/c”]，中间要用逗号隔开，注意路径（引号貌似可以不加）]]></content>
+    <content type="text"><![CDATA[在github上传博客，有时候会失败，而且速度也很慢，所以就想放到国内的服务器上，怎奈何囊中羞涩买不起服务器，手里正好有个云主机，所以就用ftp的形式上传hexo的静态文件啦先放上hexo的官方文档的传送门点我先在你的bloge目录运行如下代码：1$ npm install hexo-deployer-ftpsync --save 然后在站点配置文件找到deploy:我的配置是这样子的：123456789101112131415deploy:- type: git repo: xxxxxxxx branch: master- type: ftpsync host: xxxxx #主机地址 user: xxxx #用户名 pass: xxxx #密码 //注意我用的是阿里云的云主机，按照他的规定我必须把文件放到根目录下的htdocs文件夹内 remote: /htdocs/ #上传到空间的指定目录。比如/public_html/。默认为/ port: 21 #端口，默认为21 //logreport 也是云主机的文件，无法删除，需要忽略它，都则会报错 ignore: [/logreport] #忽略的文件 connections: 1 #使用的连接数，默认1 verbose: true #显示调试信息，默认false hexo本身支持多站点上传，所以我们不需要删除以前的上传方式，不过注意正确的缩进以及空格 由于使用ftpsync上传，每次都会删除以前的文件，所以把你没有权限删除的以及不想删除或者修改的文件写到ignore这里，ignore: [“/s”,”/c”]，中间要用逗号隔开，注意路径（引号貌似可以不加）]]></content>
       <categories>
         <category>hexo</category>
       </categories>
@@ -58,8 +70,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>leetcode</tag>
         <tag>算法</tag>
+        <tag>leetcode</tag>
         <tag>思路</tag>
       </tags>
   </entry>
@@ -71,8 +83,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>leetcode</tag>
         <tag>算法</tag>
+        <tag>leetcode</tag>
         <tag>思路</tag>
       </tags>
   </entry>
