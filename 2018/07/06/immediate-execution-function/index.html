@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js,函数," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="丰林的个人博客,有一些网站的知识和前端学习随笔">
-<meta name="keywords" content="博客,前端,网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="丰木木de学习计划">
-<meta property="og:url" content="https://fengmumu1.github.io/tags/算法/index.html">
+<meta name="description" content="发现一个有意思的问题，有下面一段代码123function f(x, y)&amp;#123;  console.log(x + y)&amp;#125;(3,4)我们把它输入到firebug下的命令控制台里面，回车之后会输出什么？">
+<meta name="keywords" content="js,函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈立即执行函数">
+<meta property="og:url" content="https://fengmumu1.github.io/2018/07/06/immediate-execution-function/index.html">
 <meta property="og:site_name" content="丰木木de学习计划">
-<meta property="og:description" content="丰林的个人博客,有一些网站的知识和前端学习随笔">
+<meta property="og:description" content="发现一个有意思的问题，有下面一段代码123function f(x, y)&amp;#123;  console.log(x + y)&amp;#125;(3,4)我们把它输入到firebug下的命令控制台里面，回车之后会输出什么？">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-07T03:11:37.248Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="丰木木de学习计划">
-<meta name="twitter:description" content="丰林的个人博客,有一些网站的知识和前端学习随笔">
+<meta name="twitter:title" content="浅谈立即执行函数">
+<meta name="twitter:description" content="发现一个有意思的问题，有下面一段代码123function f(x, y)&amp;#123;  console.log(x + y)&amp;#125;(3,4)我们把它输入到firebug下的命令控制台里面，回车之后会输出什么？">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://fengmumu1.github.io/tags/算法/"/>
+  <link rel="canonical" href="https://fengmumu1.github.io/2018/07/06/immediate-execution-function/"/>
 
 
 
 
 
-  <title>标签: 算法 | 丰木木de学习计划</title>
+  <title>浅谈立即执行函数 | 丰木木de学习计划</title>
   
 
 
@@ -156,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,110 +285,274 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>算法<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fengmumu1.github.io/2018/07/06/immediate-execution-function/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="丰林">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="丰木木de学习计划">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/07/04/count-primes-think/" itemprop="url">
-              
-                <span itemprop="name">计算素数个数的三段进阶</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">浅谈立即执行函数</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-04T20:48:58+08:00"
-              content="2018-07-04" >
-          07-04
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-06T19:28:06+08:00">
+                2018-07-06
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/06/immediate-execution-function/" class="leancloud_visitors" data-flag-title="浅谈立即执行函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  980
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/02/Single-Number/" itemprop="url">
-              
-                <span itemprop="name">发现个异或的妙用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-02T21:35:45+08:00"
-              content="2018-07-02" >
-          07-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/02/leetode-Power-of-Two-think/" itemprop="url">
-              
-                <span itemprop="name">从Power_of_Two所得</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-02T15:21:40+08:00"
-              content="2018-07-02" >
-          07-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>发现一个有意思的问题，有下面一段代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x, y</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x + y)</span><br><span class="line">&#125;(<span class="number">3</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure><br>我们把它输入到firebug下的命令控制台里面，回车之后会输出什么？<br><a id="more"></a></p>
+<h3 id="两种函数声明方式"><a href="#两种函数声明方式" class="headerlink" title="两种函数声明方式"></a>两种函数声明方式</h3><p>在解决这个问题之前我们先看一下js的声明方式：</p>
+<h4 id="利用function函数声明（Function-Declaration）语句声明函数"><a href="#利用function函数声明（Function-Declaration）语句声明函数" class="headerlink" title="利用function函数声明（Function Declaration）语句声明函数"></a>利用function函数声明（Function Declaration）语句声明函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//利用function函数声明语句声明函数,利用此函数声明函数,函数会在所有程序执行之前进行声明，</span></span><br><span class="line"><span class="comment">//也就是说我们可以在function a 这条语句之前调用这个函数</span></span><br><span class="line">a()</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"a函数声明"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="使用函数表达式（Function-Expression）来声明函数"><a href="#使用函数表达式（Function-Expression）来声明函数" class="headerlink" title="使用函数表达式（Function Expression）来声明函数"></a>使用函数表达式（Function Expression）来声明函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用函数表达式来声明一个匿名函数，编译器会先声明一个变量b,</span></span><br><span class="line"><span class="comment">//然后在执行到这个语句的时候，再对=右边的匿名函数进行声明，再把b指向匿名函数</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"b函数声明"</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用函数表达式来声明函数，同匿名函数，只不过我们的函数有名字，也就是说c和d指向同一个函数，我们用c或d都可以</span></span><br><span class="line"><span class="comment">//调用这个函数，但是需要注意的是，在执行这条语句之前c的数值是undefine，而d则是未定义</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="function"><span class="keyword">function</span> <span class="title">d</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"c函数声明"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>要区分一个代码是函数声明还是函数表达式，那要看代码的应用上下文。</p>
+<ul>
+<li>如果有运算符号，那它就是函数表达式。</li>
+<li>如果没有运算符号而且不在条件判断语句中，就说明是函数声明，无法直接加()进行调用（运算符包括赋值号跟括号）</li>
+<li>如果在条件语句中，函数声明也会强行被当做函数表达式执行。</li>
+</ul>
+<footer><strong>@Kelichao</strong><cite><a href="https://github.com/Kelichao/javascript.basics/issues/19" target="_blank" rel="noopener">github.com/Kelichao/javascript.basics/issues/19</a></cite></footer></blockquote>
+<h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p>在我们使用函数表达式来声明函数的时候，b指向的就是函数，我们要执行函数的时候就是b()。那么b的内容是什么 ？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">我们把b的内容打印出来b == function() &#123;</span><br><span class="line">                          console.log(&quot;b函数声明&quot;)</span><br><span class="line">                        &#125;</span><br><span class="line">我们是不是想到了，如果 function() &#123;</span><br><span class="line">                        console.log(&quot;b函数声明&quot;)</span><br><span class="line">                      &#125;() </span><br><span class="line">是不是也可以让函数得到执行，我们把这种执行叫做立即执行函数，不过此处有个坑。</span><br><span class="line">他会报错`token(`，因为function是个关键字，编译器在编译的时候，如果以function开头那么</span><br><span class="line">就应该以&#125;结尾，但是咱么以)结尾了，所以我们只需要不让function开头就好啦，我们可以</span><br><span class="line">给function前面放!/+/-或者用一个()把function() &#123;</span><br><span class="line">                                    console.log(&quot;b函数声明&quot;)</span><br><span class="line">                                  &#125;() </span><br><span class="line">整个包起来，或者只包裹函数声明的那一部分，不过用!/+ /-有可能改变函数的返回值，同时为了更</span><br><span class="line">符合函数的定义所以我们一般用()把函数声明的那一部分包起来，就变成了</span><br><span class="line">&#123;% codeblock lang:Javascript %&#125;</span><br><span class="line">(function f()&#123;</span><br><span class="line">  console.log(&quot;xxx&quot;)</span><br><span class="line">&#125;)()</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>IIFE（Immediately Invoked Function Expression），立即执行函数表达式<br>javascript中没用私有作用域的概念，如果在多人开发的项目上，你在全局或局部作用域中声明了一些变量，可能会被其他人不小心用同名的变量给覆盖掉，</p>
+<p>根据javascript函数作用域链的特性，可以使用这种技术可以模仿一个私有作用域，用匿名函数作为一个“容器”，“容器”内部可以访问外部的变量，</p>
+<p>而外部环境不能访问“容器”内部的变量，所以( function(){…} )()内部定义的变量不会和外部的变量发生冲突，俗称“匿名包裹器”或“命名空间”。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感觉不错的话给博主赞助一下呗</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="丰林 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="丰林 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    丰林
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://fengmumu1.github.io/2018/07/06/immediate-execution-function/" title="浅谈立即执行函数">https://fengmumu1.github.io/2018/07/06/immediate-execution-function/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/函数/" rel="tag"># 函数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/04/count-primes-think/" rel="next" title="计算素数个数的三段进阶">
+                <i class="fa fa-chevron-left"></i> 计算素数个数的三段进阶
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -395,6 +560,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzc1Mi8xNDI4Mw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -415,8 +589,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -499,6 +682,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#两种函数声明方式"><span class="nav-number">1.</span> <span class="nav-text">两种函数声明方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#利用function函数声明（Function-Declaration）语句声明函数"><span class="nav-number">1.1.</span> <span class="nav-text">利用function函数声明（Function Declaration）语句声明函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用函数表达式（Function-Expression）来声明函数"><span class="nav-number">1.2.</span> <span class="nav-text">使用函数表达式（Function Expression）来声明函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#立即执行函数"><span class="nav-number">2.</span> <span class="nav-text">立即执行函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -641,6 +840,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -669,6 +872,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

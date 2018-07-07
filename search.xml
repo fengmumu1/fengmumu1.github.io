@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[浅谈立即执行函数]]></title>
+    <url>%2F2018%2F07%2F06%2Fimmediate-execution-function%2F</url>
+    <content type="text"><![CDATA[发现一个有意思的问题，有下面一段代码123function f(x, y)&#123; console.log(x + y)&#125;(3,4)我们把它输入到firebug下的命令控制台里面，回车之后会输出什么？ 两种函数声明方式在解决这个问题之前我们先看一下js的声明方式： 利用function函数声明（Function Declaration）语句声明函数123456//利用function函数声明语句声明函数,利用此函数声明函数,函数会在所有程序执行之前进行声明，//也就是说我们可以在function a 这条语句之前调用这个函数a()function a() &#123; console.log("a函数声明")&#125; 使用函数表达式（Function Expression）来声明函数12345678910//使用函数表达式来声明一个匿名函数，编译器会先声明一个变量b,//然后在执行到这个语句的时候，再对=右边的匿名函数进行声明，再把b指向匿名函数var b = function() &#123; console.log("b函数声明")&#125;//使用函数表达式来声明函数，同匿名函数，只不过我们的函数有名字，也就是说c和d指向同一个函数，我们用c或d都可以//调用这个函数，但是需要注意的是，在执行这条语句之前c的数值是undefine，而d则是未定义var c = function d() &#123; console.log("c函数声明")&#125; 要区分一个代码是函数声明还是函数表达式，那要看代码的应用上下文。 如果有运算符号，那它就是函数表达式。 如果没有运算符号而且不在条件判断语句中，就说明是函数声明，无法直接加()进行调用（运算符包括赋值号跟括号） 如果在条件语句中，函数声明也会强行被当做函数表达式执行。 @Kelichaogithub.com/Kelichao/javascript.basics/issues/19 立即执行函数在我们使用函数表达式来声明函数的时候，b指向的就是函数，我们要执行函数的时候就是b()。那么b的内容是什么 ？12345678910111213141516171819我们把b的内容打印出来b == function() &#123; console.log(&quot;b函数声明&quot;) &#125;我们是不是想到了，如果 function() &#123; console.log(&quot;b函数声明&quot;) &#125;() 是不是也可以让函数得到执行，我们把这种执行叫做立即执行函数，不过此处有个坑。他会报错`token(`，因为function是个关键字，编译器在编译的时候，如果以function开头那么就应该以&#125;结尾，但是咱么以)结尾了，所以我们只需要不让function开头就好啦，我们可以给function前面放!/+/-或者用一个()把function() &#123; console.log(&quot;b函数声明&quot;) &#125;() 整个包起来，或者只包裹函数声明的那一部分，不过用!/+ /-有可能改变函数的返回值，同时为了更符合函数的定义所以我们一般用()把函数声明的那一部分包起来，就变成了&#123;% codeblock lang:Javascript %&#125;(function f()&#123; console.log(&quot;xxx&quot;)&#125;)()&#123;% endcodeblock %&#125; IIFE（Immediately Invoked Function Expression），立即执行函数表达式javascript中没用私有作用域的概念，如果在多人开发的项目上，你在全局或局部作用域中声明了一些变量，可能会被其他人不小心用同名的变量给覆盖掉， 根据javascript函数作用域链的特性，可以使用这种技术可以模仿一个私有作用域，用匿名函数作为一个“容器”，“容器”内部可以访问外部的变量， 而外部环境不能访问“容器”内部的变量，所以( function(){…} )()内部定义的变量不会和外部的变量发生冲突，俗称“匿名包裹器”或“命名空间”。]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>函数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计算素数个数的三段进阶]]></title>
     <url>%2F2018%2F07%2F04%2Fcount-primes-think%2F</url>
     <content type="text"><![CDATA[今天坐leetcode上的Count Primes这道题，题目要求比较的简单：Count the number of prime numbers less than a non-negative number, n. 就是给一个数字，然后输出从0到这个数字内有多少个素数。老办法先实现后优化，实现之后发现优化真不容易，借助外界各种资源后，差不多算是达到了自己想达到的效果，故记录一下此次一波三折的优化。 低阶版1234567891011121314151617function isPrimes(num) &#123; for(var j = 2; j &lt;= Math.sqrt(num); j++) &#123; if(num % j == 0)&#123; return false &#125; &#125; return true&#125;var countPrimes = function(n) &#123; var coun = 0 for(var i =2; i &lt; n; i++) &#123; if(isPrimes(i)) &#123; coun++ &#125; &#125; return coun&#125;; 我们可以看到函数逻辑比较简单，内层isPrimes函数为了提高速度，给除数加了一个小于等于Math.sqrt(num)的限制，之所以可以用这个数字来做限制是因为：num = a * b 当a增大的时候b一定减小，我们假设a从1一直增加，那么b将从num一直减小，当到a = Math.sqrt(num)的时候，a == b ，如果此时a继续增大呢，a是不是就向刚才一直减小的b一样了，也就是说我们相当于把之前做的运算又从新做了一遍，而这个计算是没有意义的，所以如果一个数除到他的开跟都不能整除，基本可以判定他是一个素数了。 进阶版12345678910111213141516171819var primesList = [] function isPrimes(num) &#123; for(var j = 0; primesList[j] &lt;= Math.sqrt(num); j++) &#123; if(num % primesList[j] == 0)&#123; return false &#125; &#125; return true&#125;var countPrimes = function(n) &#123; var coun = 0 for(var i =2; i &lt; n; i++) &#123; if(isPrimes(i)) &#123; primesList.push(i) //给数组添加质数，丰富质数表 coun++ &#125; &#125; return coun&#125;; 我们看一下上面的函数，上面函数的思路是这样的：一个数（大于1），他不是质数（素数）就是合数，合数可以分解成几个质数相乘，那么我是不是只要用这个数去除以质数我就知道他是不是一个合数了，那么问题来看了，一个数我们记作A，我们只需要依次他除以[2,√A]之间的质数就能判断出来他是不是一个合数了，这样子比我们从[2,√A]，一个一个除要快很多，好了现在问题来了，我们是不是需要一个[2,√A]之间的质数表，上面的程序是这样子构建这个质数表的，从2开始，一边判断一边添加，这样子后面的数字就可以用前面的质数表了（实际上一个质数的平方是远大于紧跟在在后面的那个质数的），我们现在回到程序（其实单步跟一下程序就能看出来啦）。1234if(isPrimes(i)) &#123; primesList.push(i) //给数组添加质数，丰富质数表 coun++&#125;1 这个语句作用是，如果发现一个数是质数就给他放到质数表里，然后在记数结果+112345678function isPrimes(num) &#123; for(var j = 0; primesList[j] &lt;= Math.sqrt(num); j++) &#123; if(num % primesList[j] == 0)&#123; return false &#125; &#125; return true&#125; 这个函数是判断函数啦，需要注意的是，第一次计算的时候primesList[0] == undefine ,num % primesList[j]的结果是NAN(我更喜欢叫他是无意义的计算)，然后NAN !== 0 （NAN连自己都相等） 这样子第一质数2，就成功的放入了数组啦我们又成功地优化了函数，不禁要问这样子还可以优化吗？答案是：必须可以啊。 进阶版小优化我们给上面函数的 countPrimes 函数改一下12345678910var countPrimes = function(n) &#123; var coun = 1 for(var i =3; i &lt; n; i+=2) &#123; if(isPrimes(i)) &#123; primesList.push(i) //给数组添加质数，丰富质数表 coun++ &#125; &#125; return coun&#125;;我们把coun 初始值改成1，变量i从3开始，每次都往里放奇数（偶数绝逼是合数），这样子速度又快了不少 再进阶版虽然上面的好理解，而且有了一定的优化，但是效率并不高，那么有没有效率更高的呢，答案是必须的，我们来看一下几千年前的一个算法：埃拉托斯特尼筛法其实 埃拉托斯特尼筛法 简单的说就是，把[2,A]之间的[2,√A]的数的所有倍数全部划去，最后留下的就是质数。那么我们是不是可以这样子生成一个大小为n的数组，数组全部都为1，每发现一个合数，我们就把一个数组的元素变为0，最后我们只需要统计1的个数就好了12345678910111213141516171819202122232425function countPrimes(n) &#123; //我们声明一个大小为n的数组，并且全部标记为1（我们把标记1是质数，0标记合数）， var flags = new Array(n).fill(1) //其实这里的想法是 0 1 全不是质数，所以打掉， flags[0] = flags[1] = 0 var sn = Math.sqrt(n) //我们只比对到[2,√A]的所有倍数 for(var i = 2; i &lt;= sn; i++) &#123; //注意在循环里面我们已经操作了flags，所以我们此时不需要再判断划掉了的元素（flags[i] == 0） if (flags[i]) &#123; //注意我们这个j，埃拉托斯特尼筛法 是从数字的倍数开始划的 for(var j = i * i; j &lt; n; j += i) &#123; flags[j] = 0 &#125; &#125; &#125; var count = 0 for(var i = 0; i&lt;n; i++) &#123; if(flags[i]) &#123; count++ &#125; &#125; return count&#125;现在我们又GET了一个新技能，我们再想一下是不是还可以优化一下，答案依然是是的，我们看一下他的进阶版 再再进阶版如果你有心的话，你会发现我们上一个版本的函数，在划去合数的时候，会有重复划去的过程，这个我也就不上图了，自己单步走一下，或者在纸上画一下一切就会浮现出来的。我们先上函数12345678910111213141516171819202122//小于3 就是 0 1 直接标记为0var countPrimesx = function(n) &#123; if (n &lt; 3) &#123; return 0 &#125; //数组全部置1 var f = new Array(n).fill(true)//有一半的数字为偶数，所以直接打掉一半，然后后面的或是为了取整 var count = n / 2 | 0 for(var i = 3; i * i &lt; n; i += 2) &#123; for(var j = i * i; j &lt; n; j += 2*i) &#123; if (f[j]) &#123; --count f[j] = false &#125; &#125; &#125; return count&#125; 文章末尾感谢那些愿意分享知识的人：谢大喵TanX的博客]]></content>
@@ -8,8 +20,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>leet</tag>
         <tag>算法</tag>
+        <tag>leet</tag>
         <tag>素数</tag>
       </tags>
   </entry>
@@ -34,8 +46,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>leetcode</tag>
+        <tag>算法</tag>
         <tag>思路</tag>
       </tags>
   </entry>
@@ -47,8 +59,8 @@
         <category>leetcode</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>leetcode</tag>
+        <tag>算法</tag>
         <tag>思路</tag>
       </tags>
   </entry>
