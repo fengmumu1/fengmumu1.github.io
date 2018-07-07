@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hexo-ftp]]></title>
+    <title><![CDATA[使用ftp方式上传博客]]></title>
     <url>%2F2018%2F07%2F07%2Fhexo-ftp%2F</url>
     <content type="text"><![CDATA[在github上传博客，有时候会失败，而且速度也很慢，所以就想放到国内的服务器上，怎奈何囊中羞涩买不起服务器，手里正好有个云主机，所以就用ftp的形式上传hexo的静态文件啦先放上hexo的官方文档的传送门点我先在你的bloge目录运行如下代码：1$ npm install hexo-deployer-ftpsync --save 然后在站点配置文件找到deploy:我的配置是这样子的：123456789101112131415deploy:- type: git repo: xxxxxxxx branch: master- type: ftpsync host: xxxxx #主机地址 user: xxxx #用户名 pass: xxxx #密码 //注意我用的是阿里云的云主机，按照他的规定我必须把文件放到根目录下的htdocs文件夹内 remote: /htdocs/ #上传到空间的指定目录。比如/public_html/。默认为/ port: 21 #端口，默认为21 //logreport 也是云主机的文件，无法删除，需要忽略它，都则会报错 ignore: [/logreport] #忽略的文件 connections: 1 #使用的连接数，默认1 verbose: true #显示调试信息，默认false hexo本身支持多站点上传，所以我们不去要删除以前的上传方式，不过注意正确的缩进以及空格 由于使用ftpsync上传，每次都会删除以前的文件，所以把你没有权限删除的以及不想删除或者修改的文件写到ignore这里，ignore: [“/s”,”/c”]，中间要用逗号隔开，注意路径（引号貌似可以不加）]]></content>
       <categories>
