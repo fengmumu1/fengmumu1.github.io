@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[牛顿-拉弗森方法(Newton-Raphson_method)求平方根]]></title>
+    <url>%2F2018%2F07%2F08%2FNewton-Raphson-method%2F</url>
+    <content type="text"><![CDATA[牛顿法（英语：Newton’s method）又称为牛顿-拉弗森方法（英语：Newton-Raphson method），它是一种在实数域和复数域上近似求解方程的方法。方法使用函数 {\displaystyle f(x)} f(x)的泰勒级数的前面几项来寻找方程 {\displaystyle f(y)=0} {\displaystyle f(y)=0}的根。 维基解密 @https://zh.wikipedia.org/wiki/%E7%89%9B%E9%A1%BF%E6%B3%95 再leetcode上看到这么一道题，题目很简单：1234Sqrt(x)Implement int sqrt(int x).Compute and return the square root of x, where x is guaranteed to be a non-negative integer.Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned. 就是求一个数字的平方根，嗯题目没有截取完整们对于开方开出来是小数的，直接抛弃小数位（不是四舍五入）。解题思路可以有很多，比较快的就是牛顿法了，一开始没有一下子想通牛顿法咋做，后来想通啦，所以就记录一下。首先我们列一个关于被开方数z（在程序中是入口参数x）以及开放根x1的方程，x1 * x1 - z = y,我们把它记成F(x),当 y === 0 的时候说明x1为z的开放根。我们把他的图像画出来，图像如下（图是我从维基百科上偷得，自己的灵魂画图太丑了） 我们在x轴上找一点x0，过xo在F(x)的位置上做一条切线L1，我们可以看到L1与x轴的交点x1是逐渐逼近与F(x)与x轴的交点的，而这个交点也就是我们要求的开放根，然后我们继续做过x1在F(x)上的切线我们得到x2，不断的迭代下去，我们就可以得到一个符合我们要求的精确范围内的开放根。现在我们需要用函数来写出来，我们想到了递归，但是想一下递归的空间复杂度，所以我们用循环来做，我们只需要不断的求x直到x满足要求的精度我们就跳出循环。让我们来想一下我们如何通过现在的x来的出下一个x1呢？我们看图像L1是F(x)在x0处的切线，那么这条切线的斜率就是F(x)的导函数在x0的结果。 现在我们这样子看一下123456789101112原函数F(x)： x1 *x1 - z 原函数的导函数f&apos;(x): 2 * x1过x0的切线的方程我们设为：y = k*x + b 现在带入x0在此处的斜率和y k = 2 * x0 y = x0 * x0 - z我们得b = x0 * x0 - z - 2 * x0 * x0所以得到x0的方程是 ： y = 2 * x0 * x + x0 * x0 - z - 2 * x0 * x0 = 2 * x0 * x - z - x0 * x0我们可以看到，L1与x轴相交的点就是我们要求的x1，此时y = 0，所以x1 = （x0 * x0 + z）/ (2 * x0 * 10) 然后的出的x1不满足精确度，我们就把x1带入上面的式子，得出x2，然后不断迭代。代码如下12345678var mySqrt = function(x) &#123; var cout = 2 while (Math.abs(cout ** 2 - x) &gt; 0.0000001) &#123; cout = (cout ** 2 + x) / (2 * cout) &#125; return parseInt(cout)&#125;;]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode之Counting_Bits]]></title>
     <url>%2F2018%2F07%2F07%2FCounting-Bits%2F</url>
     <content type="text"><![CDATA[Counting_BitsGiven a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1’s in their binary representation and return them as an array. Example:For num = 5 you should return [0,1,1,2,1,2]. Follow up: It is very easy to come up with a solution with run time O(n*sizeof(integer)). But can you do it in linear time O(n) /possibly in a single pass? Space complexity should be O(n). Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.Credits:Special thanks to @ syedee for adding this problem and creating all test cases.题目如上，就是给你一个数字，让给输出从0到这个数字之间所有数字转化为二进制后1的个数。12345678910111213141516171819202122// 0 0000 0 // 1 0001 1 // 2 0010 1// 3 0011 2// 4 0100 1// 5 0101 2// 6 0110 2// 7 0111 3// ------------- // 8 1000 1 // 9 1001 2 // 10 1010 2 // 11 1011 3 // 12 1100 2 // 13 1101 3// 14 1110 3// 15 1111 4// 16 10000 1// 17 10001 2// 31 1 1111 5// 63 11 1111 6 解法一：12345678var countBits = function(num) &#123; debugger var res = [0] for (var i = 1; i &lt;= num; ++i) &#123; if (i % 2 == 0) res.push(res[parseInt(i / 2)]) else res.push(res[parseInt((i / 2))] + 1) &#125; return res解题思路：从1开始，遇到偶数时，其1的个数和该偶数除以2得到的数字的1的个数相同， 遇到奇数时，其1的个数等于该奇数除以2得到的数字的1的个数然后再加上1第二种思路：1234567var countBits = function(num) &#123; debugger var res = [0] for (int i = 1; i &lt;= num; ++i) &#123; res[i] = res[i &amp; (i - 1)] + 1; &#125; return res解题思路：每个i值都是i&amp;(i-1)对应的值加1 （简单暴力，神奇的n与n-1） 第二种参考自Grandyangde的博客:]]></content>
