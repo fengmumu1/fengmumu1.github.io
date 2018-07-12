@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://fengmumu1.github.io/2018/07/12/Eloquent-JavaScript-of-weresquirrel/</loc>
+    
+    <lastmod>2018-07-12T02:53:08.043Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://fengmumu1.github.io/2018/07/06/immediate-execution-function/</loc>
+    
+    <lastmod>2018-07-10T12:40:27.359Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://fengmumu1.github.io/2018/07/09/Ugly-Number-II/</loc>
     
     <lastmod>2018-07-09T15:06:12.679Z</lastmod>
@@ -40,13 +54,6 @@
     <loc>https://fengmumu1.github.io/2018/07/07/hexo-ftp/</loc>
     
     <lastmod>2018-07-07T11:25:08.540Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://fengmumu1.github.io/2018/07/06/immediate-execution-function/</loc>
-    
-    <lastmod>2018-07-07T10:59:54.529Z</lastmod>
     
   </url>
   
