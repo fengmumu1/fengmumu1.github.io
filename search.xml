@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo上传报错:No such device or address]]></title>
+    <url>%2F2018%2F07%2F12%2Fno-address%2F</url>
+    <content type="text"><![CDATA[今天使用hexo上传，报错(bash: /dev/tty: No such device or address)个人推测和网络有关（网太慢了），但是不想等，所以就搜了一下解决方法就是在站点配置的上传设置，把地址改一下：1234567891011deploy: type: git repo: https://github.com/你GitHub注册用户名/你GitHub注册用户名.github.io.git branch: master 改为：deploy: type: git repo: git@github.com:你GitHub注册用户名/你GitHub注册用户名.github.io.git branch: master 个人推测，由于网络不好，所以触发github的安全机制，所以提交失败，改设置之后，改了提交的模式，也就适用了不同的安全模式，所以就能提交了，具体的原理，以后有时间在搜一下。 解决方法原文]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数字转成字母]]></title>
     <url>%2F2018%2F07%2F12%2FInteger-to-English-Words%2F</url>
     <content type="text"><![CDATA[发现一个有小坑的题目 Integer to English Words题目要求：1234567891011121314151617Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 231 - 1.Example 1:Input: 123Output: &quot;One Hundred Twenty Three&quot;Example 2:Input: 12345Output: &quot;Twelve Thousand Three Hundred Forty Five&quot;Example 3:Input: 1234567Output: &quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&quot;Example 4:Input: 1234567891Output: &quot;One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety One&quot; 就是把一串数字按照英语语法格式输出成字符串的形式。英语不同于汉语，是3个一断。汉语和英语数字表达的方式不同。汉语是个，十，百，千，万，十万，百万，千万，亿，十亿……，也就是以“十”的倍数来表示；而英语则是在数字超过千以后，以“千”(thousand)的倍数来表达的。如“一万”是“十千”，即 ten thousand；“十万”是“百千”，即 hundred thousand，直至“百万”，million。百万以上的数字则用“百万”的倍数表达；如“千万”是“十百万”，即 ten million；“亿”是“百百万”，即 hundred million，直至“十亿”，billion。 所以英文表达数字时可以从右往左，三位一逗号，逗号从右往左分别对应的是：thousand, million, billion, etc。 @沪江英语www.hjenglish.com/new/p110563所以程序并不难想，思路也没有那么难，写完之后，一提交发现坑了，丫的最后面不能有空格，改了半天，最后实现了功能，发现代码很长，最后用了自带的函数trim，来去掉了多余的空格，代码也就将就算是自己能看过眼吧。下面是丑代码12345678910111213141516171819202122232425262728293031323334353637383940414243/** * @param &#123;number&#125; num * @return &#123;string&#125; */var numberToWords = function(num) &#123; //debugger if(num === 0) return 'Zero' let cous = "" let index = 0 let a = [""," One", " Two", " Three", " Four", " Five", " Six", " Seven", " Eight"," Nine", " Ten", " Eleven", " Twelve", " Thirteen", " Fourteen", " Fifteen", " Sixteen", " Seventeen", " Eighteen", " Nineteen"] let b = ["",""," Twenty", " Thirty", " Forty", " Fifty", " Sixty", " Seventy", " Eighty", " Ninety"] let c = [""," Thousand", " Million", " Billion"] let thereword = function (numb) &#123; if (numb === 0) return "" let num_temp = "" // debugger if(numb &gt; 99)&#123; if(numb % 100 &gt; 19) &#123; num_temp = a[parseInt(numb / 100)] + " Hundred" + b[parseInt((numb % 100) / 10)] + a[parseInt((numb % 100) % 10)] &#125; else &#123; num_temp = a[parseInt(numb / 100)] + " Hundred" + a[numb % 100] &#125; &#125; else &#123; if(numb &gt; 19) &#123; num_temp = b[parseInt(numb / 10)] + a[numb % 10] &#125; else &#123; num_temp = a[numb] &#125; &#125; return num_temp &#125; while(num &gt; 0) &#123; let nums = thereword(num % 1000) if(nums !== "") &#123; cous = nums + c[index] + cous &#125; else &#123; cous = nums + cous &#125; num = (num - num % 1000) / 1000 index++ &#125; return cous.trim()&#125;; 以后需要注意更多的细节要求]]></content>
