@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fengmumu1.github.io/"/>
-  <updated>2018-07-12T13:10:48.470Z</updated>
+  <updated>2018-07-12T13:15:31.820Z</updated>
   <id>https://fengmumu1.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://fengmumu1.github.io/2018/07/12/no-address/"/>
     <id>https://fengmumu1.github.io/2018/07/12/no-address/</id>
     <published>2018-07-12T13:03:34.000Z</published>
-    <updated>2018-07-12T13:10:48.470Z</updated>
+    <updated>2018-07-12T13:15:31.820Z</updated>
     
-    <content type="html"><![CDATA[<p>今天使用hexo上传，报错(bash: /dev/tty: No such device or address)<br>个人推测和网络有关（网太慢了），但是不想等，所以就搜了一下解决方法<br><a id="more"></a><br>就是在站点配置的上传设置，把地址改一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git </span><br><span class="line">  repo: https://github.com/你GitHub注册用户名/你GitHub注册用户名.github.io.git </span><br><span class="line">  branch: master</span><br><span class="line"></span><br><span class="line">　　改为：</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git </span><br><span class="line">  repo: git@github.com:你GitHub注册用户名/你GitHub注册用户名.github.io.git </span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p><p>个人推测，由于网络不好，所以触发github的安全机制，所以提交失败，改设置之后，改了提交的模式，也就适用了不同的安全模式，所以就能提交了，具体的原理，以后有时间在搜一下。</p><hr><p><a href="https://www.cnblogs.com/huahua12/p/8491805.html" target="_blank" rel="noopener">解决方法原文</a></p>]]></content>
+    <content type="html"><![CDATA[<p>今天使用hexo上传，报错(bash: /dev/tty: No such device or address)<br>个人推测和网络有关（网太慢了），但是不想等，所以就搜了一下解决方法<br><a id="more"></a><br>就是在站点配置的上传设置，把地址改一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git </span><br><span class="line">  repo: https://github.com/你GitHub注册用户名/你GitHub注册用户名.github.io.git </span><br><span class="line">  branch: master</span><br><span class="line"></span><br><span class="line">　　改为：</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git </span><br><span class="line">  repo: git@github.com:你GitHub注册用户名/你GitHub注册用户名.github.io.git </span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p><p>个人推测，由于网络不好，所以触发github的安全机制，所以提交失败，改设置之后，由原来的https提交变成了使用ssh来提交，就比较好通过了。</p><hr><p><a href="https://www.cnblogs.com/huahua12/p/8491805.html" target="_blank" rel="noopener">解决方法原文</a></p>]]></content>
     
     <summary type="html">
     
