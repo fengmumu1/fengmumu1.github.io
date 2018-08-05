@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Multiply-Strings]]></title>
+    <url>%2F2018%2F08%2F05%2FMultiply-Strings%2F</url>
+    <content type="text"><![CDATA[题目：Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. 1234567891011121314151617181920212223242526272829303132333435/** * @param &#123;string&#125; num1 * @param &#123;string&#125; num2 * @return &#123;string&#125; */var multiply = function(num1, num2) &#123; debugger let numa = num1.split("") let numb = num2.split("") let result = [] let re = [] if(numa.length === 0 || numb.length === 0) return '0' if((numa.length === 1 &amp;&amp; numa[0] === '0' )|| (numb.length === 1 &amp;&amp; numb[0] === '0')) return '0' result.length = (numa.length + numb.length) result.fill(0) for(let i = numa.length - 1; i &gt;= 0; i--) &#123; for(let j = numb.length -1; j &gt;= 0; j--) &#123; let sum = numa[i] * numb[j] let p1 = i + j let p2 = i + j + 1 sum += result[p2] result[p1] += sum / 10 &gt;&gt; 0 result[p2] = sum % 10 &#125; &#125; let k = 0 while(result[k] === 0) k++ for(let i = k; i &lt; result.length; i++) &#123; re.push(result[i]) &#125; return re.join("")&#125;; 题目连接参考资料]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>大数相加</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[双指针]]></title>
+    <url>%2F2018%2F07%2F13%2Ftwo-pointers%2F</url>
+    <content type="text"><![CDATA[今天做了一个题目：Remove Element12345678Given an array nums and a value val, remove all instances of that value in-place and return the new length.Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.The order of elements can be changed. It doesn&apos;t matter what you leave beyond the new length.Example 1:Given nums = [3,2,2,3], val = 3,Your function should return length = 2, with the first two elements of nums being 2.It doesn&apos;t matter what you leave beyond the returned length. 大概就是把数组中与val一致的数值去掉，然后，返回与val一致的元素的个数，题目不允许额外再使用一个数组。我上传一下我写的代码123456789101112131415var removeElement = function(nums, val) &#123; let leave = 0 let wipe = 0 let flag = 0 for( ; wipe &lt; nums.length; wipe++)&#123; if(nums[wipe] === val)&#123; for(leave = wipe; leave &lt; nums.length; leave++)&#123; nums[leave] = nums[leave + 1] &#125; wipe-- flag++ &#125; &#125; return nums.length - flag&#125;; 上传之后我看了一下排在我前面人的代码12345678910111213141516var removeElement = function(nums, val) &#123; var first = 0 var last = nums.length - 1 while (first &lt; last) &#123; if (nums[first] == val) &#123; nums[first] = nums[last] last-- &#125; else&#123; first++ &#125; &#125; if (nums[first] != val) &#123; first++ &#125; return first&#125;; 双指针他的写法时间复杂度是O(n)，而我的是O(n^2)，因为他用了双指针法(two-pointers),双指针(这里的指针不同于c语言的指针，这里说的是数组的下标)，指的是在遍历对象的过程中，不是普通的使用单个指针进行访问，而是使用两个相同方向或者相反方向的指针进行扫描，从而达到相应的目的。由于数组有一定的顺序，使用这种方法往往可以简化运算。 双指针的使用场景求元素和eag:给一个有序数组和一个数值，查找数组中是否有任意两个元素的合为指定的数值，有的话返回元素的下标(有多对数值只返回一对)。解决的思路是，给两个游标一个指向数组首(star)，一个指向数组尾(end)。判断两个元素合(x)与数值(y)之间的关系，我们假定数组是从小到大排序的，如果 x &gt; y 我们就给 end + 1 ,如果x &lt; y 我们就给 star + 1。 hoare的双向扫描快速划分法()算法原理：使用left和right将数组划分成三部分，left之前的部分为小于等于划分元素P的值，right之后的部分为大于划分元素P的值，left和right之间的部分是没有进行划分的区域。外循环使得left自左向右遍历，同时right自右向左遍历，在这个过程中当left遇见大于P的值则停止，等待right遇见小于等于P的值又停止之后，交换他们的值，这个循环在left和right相遇或者交叉之后停止。最后交换a[r]和left的值，并返回left；参考链接 求链表中间元素对于单链表求中间元素的问题，经典的作法是采用两个指针，初始化都指向链表表头，移动开始时，快指针移动两步，慢指针移动一步。当快指针的next为null或者快指针为null的时候，慢指针所指的就是单链表的中间元素(注意奇数个元素和偶数个元素的处理) 当然这个不是全部啦，以后发现的话再慢慢补上。]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>two-pointers</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo上传报错:No such device or address]]></title>
     <url>%2F2018%2F07%2F12%2Fno-address%2F</url>
     <content type="text"><![CDATA[今天使用hexo上传，报错(bash: /dev/tty: No such device or address)个人推测和网络有关（网太慢了），但是不想等，所以就搜了一下解决方法就是在站点配置的上传设置，把地址改一下：1234567891011deploy: type: git repo: https://github.com/你GitHub注册用户名/你GitHub注册用户名.github.io.git branch: master 改为：deploy: type: git repo: git@github.com:你GitHub注册用户名/你GitHub注册用户名.github.io.git branch: master 个人推测，由于网络不好，所以触发github的安全机制，所以提交失败，改设置之后，由原来的https提交变成了使用ssh来提交，就比较好通过了。 解决方法原文]]></content>
