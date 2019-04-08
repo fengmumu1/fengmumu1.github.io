@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://fengmumu1.github.io/"/>
-  <updated>2018-08-12T13:59:25.056Z</updated>
+  <updated>2019-04-08T15:58:00.723Z</updated>
   <id>https://fengmumu1.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git-note</title>
+    <link href="https://fengmumu1.github.io/2019/04/08/git-note/"/>
+    <id>https://fengmumu1.github.io/2019/04/08/git-note/</id>
+    <published>2019-04-08T15:22:28.000Z</published>
+    <updated>2019-04-08T15:58:00.723Z</updated>
+    
+    <content type="html"><![CDATA[<p>  Git一直都是使用的简单的命令，比如<code>git add</code>、<code>git status</code>、<code>git pull</code>、<code>git push</code> 、<code>git commit</code>、<code>git checkout</code> 、 <code>git merge</code> ，这些在工作的时候基本能满足大部分的需求了，但是一些复杂点的操作，或者其中的原理还是一知半解的，所以买了一些课程，也搜集了一些资料，希望可以把git彻底搞懂，<br><a id="more"></a></p><h3 id="Git的基础设置"><a href="#Git的基础设置" class="headerlink" title="Git的基础设置"></a>Git的基础设置</h3><ul><li>账户相关的设置<ul><li>用户名称设置： <code>git config --global user.name &#39;your_name</code></li><li>用户email设置: <code>git config --global  user.eamil &#39;your_eamil@xxx.com&#39;</code><blockquote><p>我们设置的目的是，首先修改会有名字的显示，包括提以及最初的作者、其次在有变动之后可以配置利用邮箱来通知作者接收变动通知</p><div class="note success"><p>global 处可以有一下三个参数</p><table><thead><tr><th style="text-align:center">参数名</th><th style="text-align:center">寓意</th></tr></thead><tbody><tr><td style="text-align:center">global</td><td style="text-align:center">对当前用户所有仓库有效</td></tr><tr><td style="text-align:center">local</td><td style="text-align:center">只针对某一个仓库设置</td></tr><tr><td style="text-align:center">system</td><td style="text-align:center">针对所有登录的用户有效</td></tr></tbody></table></div></blockquote></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  Git一直都是使用的简单的命令，比如&lt;code&gt;git add&lt;/code&gt;、&lt;code&gt;git status&lt;/code&gt;、&lt;code&gt;git pull&lt;/code&gt;、&lt;code&gt;git push&lt;/code&gt; 、&lt;code&gt;git commit&lt;/code&gt;、&lt;code&gt;git checkout&lt;/code&gt; 、 &lt;code&gt;git merge&lt;/code&gt; ，这些在工作的时候基本能满足大部分的需求了，但是一些复杂点的操作，或者其中的原理还是一知半解的，所以买了一些课程，也搜集了一些资料，希望可以把git彻底搞懂，&lt;br&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="https://fengmumu1.github.io/categories/git/"/>
+    
+    
+      <category term="git" scheme="https://fengmumu1.github.io/tags/git/"/>
+    
+      <category term="技巧" scheme="https://fengmumu1.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="笔记" scheme="https://fengmumu1.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>动态规划之“背包问题”</title>
@@ -173,9 +199,9 @@
       <category term="leetcode" scheme="https://fengmumu1.github.io/categories/leetcode/"/>
     
     
-      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="leetcode" scheme="https://fengmumu1.github.io/tags/leetcode/"/>
+    
+      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -212,9 +238,9 @@
       <category term="leetcode" scheme="https://fengmumu1.github.io/categories/leetcode/"/>
     
     
-      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="leetcode" scheme="https://fengmumu1.github.io/tags/leetcode/"/>
+    
+      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -238,9 +264,9 @@
       <category term="leetcode" scheme="https://fengmumu1.github.io/categories/leetcode/"/>
     
     
-      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="leetcode" scheme="https://fengmumu1.github.io/tags/leetcode/"/>
+    
+      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -362,9 +388,9 @@
       <category term="leetcode" scheme="https://fengmumu1.github.io/categories/leetcode/"/>
     
     
-      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="leetcode" scheme="https://fengmumu1.github.io/tags/leetcode/"/>
+    
+      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="思路" scheme="https://fengmumu1.github.io/tags/%E6%80%9D%E8%B7%AF/"/>
     
@@ -388,9 +414,9 @@
       <category term="leetcode" scheme="https://fengmumu1.github.io/categories/leetcode/"/>
     
     
-      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="leetcode" scheme="https://fengmumu1.github.io/tags/leetcode/"/>
+    
+      <category term="算法" scheme="https://fengmumu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="思路" scheme="https://fengmumu1.github.io/tags/%E6%80%9D%E8%B7%AF/"/>
     
@@ -465,28 +491,6 @@
       <category term="hexo" scheme="https://fengmumu1.github.io/tags/hexo/"/>
     
       <category term="markdown语法" scheme="https://fengmumu1.github.io/tags/markdown%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一个文件</title>
-    <link href="https://fengmumu1.github.io/2018/06/28/fist%20document/"/>
-    <id>https://fengmumu1.github.io/2018/06/28/fist document/</id>
-    <published>2018-06-28T11:57:29.000Z</published>
-    <updated>2018-07-03T01:30:45.540Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第一个文件"><a href="#第一个文件" class="headerlink" title="第一个文件"></a>第一个文件</h1><p>浪费了大半天，试着用hexo在github上建了一个博客，就一个感觉：小屏幕太毁眼睛了<br><a id="more"></a><br>目前先这样后期有如下安排</p><ul><li>熟悉hexo</li><li>修改目前正在使用的<a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank" rel="noopener">appollo模版</a></li><li>写学习笔记</li></ul><hr>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;第一个文件&quot;&gt;&lt;a href=&quot;#第一个文件&quot; class=&quot;headerlink&quot; title=&quot;第一个文件&quot;&gt;&lt;/a&gt;第一个文件&lt;/h1&gt;&lt;p&gt;浪费了大半天，试着用hexo在github上建了一个博客，就一个感觉：小屏幕太毁眼睛了&lt;br&gt;
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://fengmumu1.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="杂谈" scheme="https://fengmumu1.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
