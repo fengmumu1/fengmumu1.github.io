@@ -84,14 +84,14 @@
 <meta name="description" content="Git一直都是使用的简单的命令，比如git add、git status、git pull、git push 、git commit、git checkout 、 git merge ，这些在工作的时候基本能满足大部分的需求了，但是一些复杂点的操作，或者其中的原理还是一知半解的，所以买了一些课程，也搜集了一些资料，希望可以把git彻底搞懂，">
 <meta name="keywords" content="git,技巧,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git-note">
+<meta property="og:title" content="git基本操作">
 <meta property="og:url" content="https://fengmumu1.github.io/2019/04/08/git-note/index.html">
 <meta property="og:site_name" content="丰木木de学习计划">
 <meta property="og:description" content="Git一直都是使用的简单的命令，比如git add、git status、git pull、git push 、git commit、git checkout 、 git merge ，这些在工作的时候基本能满足大部分的需求了，但是一些复杂点的操作，或者其中的原理还是一知半解的，所以买了一些课程，也搜集了一些资料，希望可以把git彻底搞懂，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-08T15:58:00.723Z">
+<meta property="og:updated_time" content="2019-04-10T16:12:49.079Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git-note">
+<meta name="twitter:title" content="git基本操作">
 <meta name="twitter:description" content="Git一直都是使用的简单的命令，比如git add、git status、git pull、git push 、git commit、git checkout 、 git merge ，这些在工作的时候基本能满足大部分的需求了，但是一些复杂点的操作，或者其中的原理还是一知半解的，所以买了一些课程，也搜集了一些资料，希望可以把git彻底搞懂，">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>git-note | 丰木木de学习计划</title>
+  <title>git基本操作 | 丰木木de学习计划</title>
   
 
 
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git-note</h1>
+          <h1 class="post-title" itemprop="name headline">git基本操作</h1>
         
 
         <div class="post-meta">
@@ -368,7 +368,7 @@
 
           
           
-             <span id="/2019/04/08/git-note/" class="leancloud_visitors" data-flag-title="git-note">
+             <span id="/2019/04/08/git-note/" class="leancloud_visitors" data-flag-title="git基本操作">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  242
+                  678
                 </span>
               
 
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -458,10 +458,33 @@
 <td style="text-align:center">针对所有登录的用户有效</td>
 </tr>
 </tbody>
-</table></div>
-</blockquote>
+</table></div></blockquote>
 </li>
 </ul>
+</li>
+<li>查看账户相关的设置<ul>
+<li>用户名全局设置： <code>git config --global --list</code><blockquote>
+<p>global 处和上面的三个参数是一一对应的</p>
+</blockquote>
+<h3 id="创建-Git-仓库"><a href="#创建-Git-仓库" class="headerlink" title="创建 Git 仓库"></a>创建 Git 仓库</h3></li>
+</ul>
+</li>
+<li><p>在已有的代码的项目项目中使用 git 来管理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd 项目所在目录  // 如果打开位置就在目录里，就不需要进去啦</span><br><span class="line">git init  // 然后就会给你弹相关的设置</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接用 git 新建一个项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd 项目预计目录  // 如果打开位置就在目录里，就不需要进去啦</span><br><span class="line">git init you_project_name // 会在所在目录创建和项目名一样的文件夹，并且在里面放入 git 配置文件</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="git-暂存区和版本提交"><a href="#git-暂存区和版本提交" class="headerlink" title="git 暂存区和版本提交"></a>git 暂存区和版本提交</h3><ul>
+<li>我们使用 <code>git add xx</code> 是把文件添加到暂存区<br>add 后面可以写多个文件名，也可以直接写 <code>.</code> , 来把所有的文件都添加进去。</li>
+<li>使用 <code>git commite</code> 把暂存区的文件提交到版本中去。</li>
+<li>使用 <code>git status</code> 我们可以查看当前项目内更改了的文件，以及文件的状态是监控了，还是未监控。<h3 id="使用-git-直接给文件夹重命名"><a href="#使用-git-直接给文件夹重命名" class="headerlink" title="使用 git 直接给文件夹重命名"></a>使用 git 直接给文件夹重命名</h3></li>
+<li><p>使用 <code>git mv 原始文件名  目标文件名</code> 这个比较方便一点。</p>
+<h3 id="查看-git-的版本记录"><a href="#查看-git-的版本记录" class="headerlink" title="查看 git 的版本记录"></a>查看 git 的版本记录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git log // 输出 git 的所有的日志</span><br><span class="line">// 参数</span><br><span class="line">-n* // 可以指定查看就近提交的数量，* 是数量，注意 * 和 n 之间没有空格。</span><br><span class="line">--oneline // 一个比较简洁的方式查看 log 日志</span><br><span class="line">--graph // 可以查看分支合并关系的一个操作</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>需要注意的一点是，当 log 过多且查看的时候没有指定数量，必须要使用 q （按住 q 键即可）来退出。</p>
+</blockquote>
 </li>
 </ul>
 
@@ -513,7 +536,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://fengmumu1.github.io/2019/04/08/git-note/" title="git-note">https://fengmumu1.github.io/2019/04/08/git-note/</a>
+    <a href="https://fengmumu1.github.io/2019/04/08/git-note/" title="git基本操作">https://fengmumu1.github.io/2019/04/08/git-note/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -713,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git的基础设置"><span class="nav-number">1.</span> <span class="nav-text">Git的基础设置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git的基础设置"><span class="nav-number">1.</span> <span class="nav-text">Git的基础设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-Git-仓库"><span class="nav-number">2.</span> <span class="nav-text">创建 Git 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-暂存区和版本提交"><span class="nav-number">3.</span> <span class="nav-text">git 暂存区和版本提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-git-直接给文件夹重命名"><span class="nav-number">4.</span> <span class="nav-text">使用 git 直接给文件夹重命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看-git-的版本记录"><span class="nav-number">5.</span> <span class="nav-text">查看 git 的版本记录</span></a></li></ol></div>
             
 
           </div>
@@ -747,7 +770,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.6k</span>
+    <span title="Site words total count">20.3k</span>
   
 </div>
 

@@ -1901,7 +1901,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,056
+                  3,336
                 </span>
               
 
@@ -1917,7 +1917,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  13
                 </span>
               
             </div>
@@ -1939,7 +1939,12 @@
 
       
         
-          <p>JavaScript中数字是不区分整数值与浮点数值的，在JavaScript中所有的数均使用64位的浮点格式来存储以及表示（IEEE 754标准）。所以数值最大是：±1.7976931348623157 X 10^308最小是±5X10^-324，可以表示的整数范围是-9 007 199 254 740 992~9 007 199 254 740 992 （对应的是-2^53~2^53）包含边界值。<br><div class="note danger"><p>注意：在对JS中的数值进行位操作的时候会自动把64位转化为32进行操作（由于运算符的自身限制，其只能对32位进行操作），在对小数进行位操作 比如左移零位，小数会丢弃小数部分转化成整数 </p></div><br>
+          <p>JavaScript中数字是不区分整数值与浮点数值的，在JavaScript中所有的数均使用64位的浮点格式来存储和表示（IEEE 754标准）。所以数值最大是：±1.7976931348623157 X 10^308，最小是±5X10^-324，可以表示的整数范围是-9 007 199 254 740 992 ~ 9 007 199 254 740 992 （对应的是-2^53~2^53）包含边界值。</p>
+<blockquote>
+<p>注意这里说的最大/小，准确的应该说是：在正数和负数范围内可以准确得到的最大最小的数<br>  比如1.7976931348623157 X 10^308 是可以得到的最大的正数，也就是 JavaScript 中的MAX_VALUE，任何大于这个的在 js 中都是 Infinity，需要注意的是，他的负数，从数学上可以说是最小值，但是在存储上并不是最小的值<br>  而 5X10^-324 是可以得到的最小的 最接近于 0 的最小的值，js 中的 MIN_VALUE 的值约为 5e-324。小于 MIN_VALUE (“underflow values”) 的值将会转换为 0， 注意，当这个数值表示为负数的时候 他是负数范围内最大的数值</p>
+</blockquote>
+<blockquote>
+<p>注意了啊，上面的有隐藏的问题的，结尾有相关的解释哈<br><div class="note danger"><p>注意：在对JS中的数值进行位操作的时候会自动把64位转化为32进行操作（由于运算符的自身限制，其只能对32位进行操作），在对小数进行位操作 比如左移零位，小数会丢弃小数部分转化成整数, 所以以后看到 <code>1.25 &gt;&gt; 0</code>，就知道大佬是想做一个取整操作啦。</p></div><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/06/30/js-number/#more" rel="contents">
@@ -2314,7 +2319,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.6k</span>
+    <span title="Site words total count">20.3k</span>
   
 </div>
 
