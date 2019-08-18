@@ -93,7 +93,7 @@
 <meta property="og:image" content="https://fengmumu1.github.io/2018/06/30/js-number/da.jpg">
 <meta property="og:image" content="https://fengmumu1.github.io/2018/06/30/js-number/小数十进制转二进制.jpg">
 <meta property="og:image" content="https://fengmumu1.github.io/2018/06/30/js-number/整数十进制转二进制.jpg">
-<meta property="og:updated_time" content="2019-06-02T05:58:00.625Z">
+<meta property="og:updated_time" content="2019-08-18T09:13:03.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中的数字存储">
 <meta name="twitter:description" content="JavaScript中数字是不区分整数值与浮点数值的，在JavaScript中所有的数均使用64位的浮点格式来存储和表示（IEEE 754标准）。所以数值最大是：±1.7976931348623157 X 10^308，最小是±5X10^-324，可以表示的整数范围是-9 007 199 254 740 992 ~ 9 007 199 254 740 992 （对应的是-2^53~2^53）包含边">
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,336
+                  3,373
                 </span>
               
 
@@ -440,7 +440,7 @@
 <p>注意这里说的最大/小，准确的应该说是：在正数和负数范围内可以准确得到的最大最小的数<br>  比如1.7976931348623157 X 10^308 是可以得到的最大的正数，也就是 JavaScript 中的MAX_VALUE，任何大于这个的在 js 中都是 Infinity，需要注意的是，他的负数，从数学上可以说是最小值，但是在存储上并不是最小的值<br>  而 5X10^-324 是可以得到的最小的 最接近于 0 的最小的值，js 中的 MIN_VALUE 的值约为 5e-324。小于 MIN_VALUE (“underflow values”) 的值将会转换为 0， 注意，当这个数值表示为负数的时候 他是负数范围内最大的数值</p>
 </blockquote>
 <blockquote>
-<p>注意了啊，上面的有隐藏的问题的，结尾有相关的解释哈<br><div class="note danger"><p>注意：在对JS中的数值进行位操作的时候会自动把64位转化为32进行操作（由于运算符的自身限制，其只能对32位进行操作），在对小数进行位操作 比如左移零位，小数会丢弃小数部分转化成整数, 所以以后看到 <code>1.25 &gt;&gt; 0</code>，就知道大佬是想做一个取整操作啦。</p></div><br><a id="more"></a></p>
+<p>注意了啊，上面的有隐藏的问题的，结尾有相关的解释哈<br><div class="note danger"><p>注意：在对JS中的数值进行位操作的时候会自动把64位转化为32进行操作（由于运算符的自身限制，其只能对32位进行操作），在对小数进行位操作 比如左移零位，小数会丢弃小数部分转化成整数, 所以以后看到 <code>1.25 &gt;&gt; 0</code>，就知道大佬是想做一个取整操作啦<strong> 这里尤其注意的一点通过位运算来做取整操作，会有溢出风险，数值会变，所以请谨慎使用 </strong>。</p></div><br><a id="more"></a></p>
 </blockquote>
 <h3 id="JavaScript中数字不一定很准确"><a href="#JavaScript中数字不一定很准确" class="headerlink" title="JavaScript中数字不一定很准确"></a>JavaScript中数字不一定很准确</h3><p>首先我们先看一段代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">0</span></span><br><span class="line"><span class="keyword">var</span> y = <span class="number">0</span></span><br><span class="line">x = <span class="number">.3</span> - <span class="number">.2</span></span><br><span class="line">y = <span class="number">.2</span> - <span class="number">.1</span></span><br><span class="line"><span class="built_in">console</span>.log(x == <span class="number">.1</span> ) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(y == <span class="number">.1</span> ) <span class="comment">// true</span></span><br></pre></td></tr></table></figure><br>运行结果是 false 和 true<br>讲道理的说0.3 - 0.2 = 0.1;0.2-0.1 = 0.1 这个是正确的，那么为什么到了JS的代码里就不正确了，解决这个问题，我们首先要看一下JS的数字是如何存储的。</p>
 <blockquote>
@@ -702,7 +702,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -724,7 +724,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -814,7 +814,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">20.3k</span>
+    <span title="Site words total count">20.7k</span>
   
 </div>
 
